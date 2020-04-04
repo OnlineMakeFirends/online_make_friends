@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> radio_click2.html </title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="radio_click2.js">    </script>
+</head>
+
+<body>
+    <h4> Fruit Shop</h4>
+    <form id="myForm" action="">
+        <p>
+            <label> 
+                <input type="checkbox" name="fruit" value="59" />
+                apple $59
+            </label>
+            <br />
+            <label>
+                <input type="checkbox" name="fruit" value="49" />
+                orange $49
+            </label>
+            <br />
+            <label>
+                <input type="checkbox" name="fruit" value="39" />
+                banana $39
+            </label>
+            <br />
+            <input type="submit" value="提交" onclick="alert(total_cost);">
+        </p>
+    </form>
+    <!-- Script for registering the event handlers -->
+    <script type="text/javascript">
+        var dom = document.getElementById("myForm");
+        dom.elements[0].onclick = buy;
+        dom.elements[1].onclick = buy;
+        dom.elements[2].onclick = buy; 
+    </script>
+</body>
+
+</html>
