@@ -1,7 +1,7 @@
 package com.litnwu.demo.web;
 
 import com.litnwu.demo.model.User;
-import com.litnwu.demo.service.userService;
+import com.litnwu.demo.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LoginController {
     @Autowired
-    userService userService;
+    UserService userService;
     @ResponseBody
     @RequestMapping(value = "/login_ajax_check")
     public User login(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model)

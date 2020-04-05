@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.litnwu.demo.dao.userDao;
 
 @Service
-public class userService {
+public class UserService {
     @Autowired
     private userDao userDao;
     public User findByName(String name, String passwd)
