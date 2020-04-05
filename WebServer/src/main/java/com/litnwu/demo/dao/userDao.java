@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface userDao {
-    @Select("select * from user where name=#{name} and passwd=#{passwd}")
-    User Login(@Param("name") String name, @Param("passwd") String passwd);
+    @Select("select * from user_1 where name=#{name}")
+    User Login(@Param("name") String name);
 }

@@ -11,43 +11,22 @@
                 username=$('#username').val()
                 password=$('#password').val()
                 //2.发起post ajax请求，/login_ajax_check,携带用户名和密码
-                /*
                 $.ajax({
-                    'url':'/login_ajax_check',
-                    'type':'post',
-                    'data':{'username':username,'password':password},
-                    'dataType':'json'
-                }).success(function (data) {
-                     if(data.res==0){
-                        $('#errmsg').show().html('用户名或密码错误')
-                    }
-                    else{
-                        //跳转首页
-                        location.href='home/'
-                    }
-                })*/
-                $.ajax({
-                    url:"/login_ajax_check",
+                    url:"/login_check",
                     data:{username:username,password:password},
                     async:true,
                     cache:false,
                     type:"POST",
                     success:function(result){
-                        alert(result.name+result.passwd);
-                        if(result){
-                            alert("用户名或密码正确！");
-                            //console.log('true');
-                            $(location).attr('href', '/home');
-                            //$.cookie('name',result.name, { expires: 7 });
-                            //$.cookie('passwd',result.passwd, { expires: 7 });
+                        //alert(result.code);
+                        if(result.code==200){
+                            $(location).attr('href', '/');
                         }else{
-                            alert("用户名或密码错误");
+                            alert("用户名或密码错误!");
                             return false;
                         }
                     }
                 });
-
-
             })
         })
     </script>
