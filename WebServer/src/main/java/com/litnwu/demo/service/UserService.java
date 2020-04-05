@@ -10,8 +10,8 @@ import com.litnwu.demo.dao.userDao;
 public class UserService {
     @Autowired
     private userDao userDao;
-    public User findByName(String name, String passwd)
+    public User findByName(String name)
     {
-        return  userDao.Login(name,passwd);
+        return  userDao.Login(name);
     }
 }
