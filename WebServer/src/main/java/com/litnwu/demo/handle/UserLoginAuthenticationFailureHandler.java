@@ -2,7 +2,6 @@ package com.litnwu.demo.handle;
 
 import com.google.gson.Gson;
 import com.litnwu.demo.json.JsonData;
-import com.litnwu.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.AuthenticationException;
