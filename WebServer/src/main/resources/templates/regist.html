@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-      <meta http-equiv="refresh">
-      <title>登录</title>
-      <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-      <script>
+    <meta http-equiv="refresh">
+    <title>注册</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
         $(function () {
-            $('#btnLogin').click(function () {
+            $('#btnSignin').click(function () {
                 //1.获取用户名、密码
                 username=$('#username').val()
                 password=$('#password').val()
-                //2.发起post ajax请求，/login_ajax_check,携带用户名和密码
+                //2.发起post ajax请求，,携带用户名和密码
                 $.ajax({
-                    url:"/login_check",
+                    url:"/regist_submit",
                     data:{username:username,password:password},
                     async:true,
                     cache:false,
                     type:"POST",
                     success:function(result){
-                        //alert(result.code);
+                        alert(result.code);
                         if(result.code==200){
-                            $(location).attr('href', '/');
+                            alert("注册成功");
+                            $(location).attr('href', '/login');
                         }else{
-                            alert("用户名或密码错误!");
+                            alert("错误!");
                             return false;
                         }
                     }
@@ -30,9 +31,9 @@
             })
         })
     </script>
-      <style type="text/css">
+    <style type="text/css">
         body{//清除样式,设置字体和背景
-            margin: 0;
+        margin: 0;
             padding: 0;
             font-family: sans-serif;
             background: #34495e;
@@ -85,7 +86,7 @@
             transition: 0.25s;
             cursor: pointer;
         }
-       .box input[type="reset"]{
+        .box input[type="reset"]{
             border: 0;
             background: none;
             display: block;
@@ -113,21 +114,18 @@
     </style>
 
 </head>
-
-
 <body>
-    <div id="app">
-        <form class="box">
-            <h1>登录</h1>
-            <input type="text" id="username" placeholder="Enter the Username">
-            <input type="password" id="password" placeholder="Enter the Password">
-            <input type="button" id="btnSignin" onclick="location.href='/regist'"  value="注册">
-            <input type="button" id="btnLogin" value="登录">
 
-            <input type="reset" @click="login" value="重置">
+<div id="app">
+    <form class="box">
+        <h1>注册</h1>
+        用户名:<input type="text" id="username" placeholder="Enter the Username">
+        密码:<input type="password" id="password" placeholder="Enter the Password">
+        <input type="button" id="btnSignin" onclick="location.href='/regist'"  value="注册">
+        <input type="reset" @click="login" value="重置">
 
-        </form>
-    </div>
-    <div id="errmsg"></div>
+    </form>
+</div>
+<div id="errmsg"></div>
 </body>
 </html>

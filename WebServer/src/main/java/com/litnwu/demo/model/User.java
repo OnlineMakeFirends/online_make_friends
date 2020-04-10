@@ -1,10 +1,7 @@
 package com.litnwu.demo.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,16 +16,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
+@Data
 public class User implements UserDetails {
     private Integer id;
-    public String name;
-    public String passwd;
-
+    private String name;
+    private String passwd;
 
     public User(String name, String passwd){
         this.name = name;
         this.passwd = passwd;
     }
+
 
     //不涉及用户角色，直接赋予管理员角色
     @Override

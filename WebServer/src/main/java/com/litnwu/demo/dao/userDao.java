@@ -2,6 +2,7 @@ package com.litnwu.demo.dao;
 
 
 import com.litnwu.demo.model.User;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -12,4 +13,7 @@ import org.springframework.stereotype.Repository;
 public interface userDao {
     @Select("select * from user_1 where name=#{name}")
     User Login(@Param("name") String name);
+
+    @Insert("insert into user_1 (id,name,passwd) values(#{id},#{name},#{passwd})")
+    void register(User user);
 }
