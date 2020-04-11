@@ -23,7 +23,6 @@ public class UserLoginAuthenticationSuccessHandler extends SimpleUrlAuthenticati
         String json = new Gson().toJson(jsonData);
         response.setContentType("application/json;charset=utf-8");
         PrintWriter out = response.getWriter();
-        System.out.println("200");
         out.write(json);
         out.flush();
         out.close();

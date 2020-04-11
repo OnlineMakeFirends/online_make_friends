@@ -59,7 +59,8 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-
+                .logoutSuccessUrl("/login")
+                .deleteCookies("JSESSIONID")    //退出时要删除的Cookies的名字
                 .and()
                 .formLogin()
                 .loginPage("/login")  //定义当需要用户登录时候，转到的登录页面

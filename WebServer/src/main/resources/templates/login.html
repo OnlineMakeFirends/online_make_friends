@@ -22,7 +22,7 @@
                         if(result.code==200){
                             $(location).attr('href', '/');
                         }else{
-                            alert("用户名或密码错误!");
+                            alert(result.msg);
                             return false;
                         }
                     }

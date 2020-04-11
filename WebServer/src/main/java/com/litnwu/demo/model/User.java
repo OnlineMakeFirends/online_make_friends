@@ -32,7 +32,7 @@ public class User implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> auths = new ArrayList<>();
-        auths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+        auths.add(new SimpleGrantedAuthority("USER"));
         return auths;
     }
 

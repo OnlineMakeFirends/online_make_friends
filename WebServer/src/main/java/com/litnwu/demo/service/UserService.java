@@ -16,10 +16,7 @@ public class UserService {
         return  userDao.Login(name);
     }
 
-    public JsonData regist(User user){
-        JsonData result= new JsonData(200,"0");
-        //userDao.register(user);
-
-        return result;
+    public void regist(String name,String passwd){
+        userDao.register(name,passwd);
     }
 }

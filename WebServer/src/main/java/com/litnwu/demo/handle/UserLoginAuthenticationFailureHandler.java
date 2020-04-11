@@ -27,11 +27,13 @@ public class UserLoginAuthenticationFailureHandler extends SimpleUrlAuthenticati
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
                                         AuthenticationException exception) throws IOException, ServletException {
         JsonData jsonData = null;
-        if(exception.getMessage().equals("用户不存在")){
-            jsonData = new JsonData(402,"用户不存在");
-        }
 
-        if(exception.getMessage().equals("Bad credentials")){
+        System.out.println(exception.getMessage());
+
+        if(!exception.getMessage().equals("Bad credentials")){
+            jsonData = new JsonData(402,exception.getMessage());
+        }
+        else{
             jsonData = new JsonData(403,"密码错误");
         }
 
