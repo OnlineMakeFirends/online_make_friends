@@ -95,15 +95,7 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                　　<!--版本根据你自己的版本写 -->
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
+
 
         </plugins>
         <resources>
