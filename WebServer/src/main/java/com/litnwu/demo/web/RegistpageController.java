@@ -29,22 +29,22 @@ public class RegistpageController {
     @GetMapping("/regist")
     public String home(){return "regist";}
 
+    /* 使用th模板测试
     @PostMapping("/regist_submit2")
     public String regist(@Param("username") String name, @Param("password") String passwd){
         System.out.println("rere:"+name+passwd);
         //userService.regist(user);
         return "login";
-    }
+    }*/
 
     @ResponseBody
     @RequestMapping(value = "/regist_submit")
     public JsonData login(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model)
     {
-        JsonData result = new JsonData(200,"注册成功！");
+        JsonData result;
         String name = request.getParameter("username");
         String passwd = request.getParameter("password");
-        System.out.println(name);
-        System.out.println(passwd);
+        //......
 
         if(name.equals("") || passwd.equals("")){
             result = new JsonData(303,"用户名或密码格式错误");

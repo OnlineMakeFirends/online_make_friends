@@ -28,8 +28,6 @@ public class UserLoginAuthenticationFailureHandler extends SimpleUrlAuthenticati
                                         AuthenticationException exception) throws IOException, ServletException {
         JsonData jsonData = null;
 
-        System.out.println(exception.getMessage());
-
         if(!exception.getMessage().equals("Bad credentials")){
             jsonData = new JsonData(402,exception.getMessage());
         }

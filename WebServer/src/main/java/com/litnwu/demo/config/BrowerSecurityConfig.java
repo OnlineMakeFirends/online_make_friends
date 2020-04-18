@@ -100,7 +100,7 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(myUserDetailsService()).passwordEncoder(new PasswordEncoder() {
             @Override
             public String encode(CharSequence charSequence) {
-                System.out.println("encode: "+ENCODER.encode(charSequence));
+               // System.out.println("encode: "+ENCODER.encode(charSequence));
                 return ENCODER.encode(charSequence);
             }
 
