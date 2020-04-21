@@ -5,6 +5,15 @@
     <meta http-equiv="refresh">
     <title>注册</title>
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        function resetForm()
+        {
+            $(':input', '#myForm')
+            .not(':button, :submit, :reset, :hidden,:radio') // 去除不需要重置的input类型
+            .val('')
+            .removeAttr('text');
+        }
+    </script>
     <style type="text/css">
         body{//清除样式,设置字体和背景
             margin: 0;
@@ -46,7 +55,7 @@
             width: 280px;
             border-color: #2ecc71;
         }
-        .box input[type="button"],.box input[type="submit"]{
+        .box input[type="reset"],.box input[type="submit"]{
             border: 0;
             background: none;
             display: block;
@@ -61,7 +70,7 @@
             transition: 0.25s;
             cursor: pointer;
         }
-        .box input[type="reset"]{
+        .box input[type="button"]{
             border: 0;
             background: none;
             display: block;
@@ -96,7 +105,7 @@
 
 
 <div id="app">
-    <form class="box"  method="POST" th:object="${user}" th:action="@{/regist_submit2}">
+    <form id="myForm" class="box"  method="POST" th:object="${user}" th:action="@{/regist_submit2}">
 
         <!-- 验证失败 -->
         <div th:if="${#fields.hasErrors()}">
@@ -131,7 +140,7 @@
         <br />
 
         <input type="submit" id="btnSignin"  value="注册">
-        <input type="reset" @click="login" value="重置">
+        <input type="button" onclick="resetForm()" value="重置">
         <br />
     </form>
 </div>

@@ -51,6 +51,7 @@ public class RegistpageController {
 
             if(finded_user != null){
                 result = new JsonData(302,"用户名已被注册！");
+                model.addAttribute("user", new User());
                 model.addAttribute("result", result);
                 return "regist";
             }
@@ -58,6 +59,7 @@ public class RegistpageController {
         }
         catch (Exception e){
             result = new JsonData(303,"未知错误！");
+            model.addAttribute("user", new User());
             model.addAttribute("result", result);
             return "redirect:/regist";
         }
