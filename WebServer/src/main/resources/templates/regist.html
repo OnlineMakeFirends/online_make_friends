@@ -1,37 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="refresh">
     <title>注册</title>
     <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $('#btnSignin').click(function () {
-                //1.获取用户名、密码
-                username=$('#username').val()
-                password=$('#password').val()
-                //2.发起post ajax请求，,携带用户名和密码
-                $.ajax({
-                    url:"/regist_submit",
-                    data:{username:username,password:password},
-                    async:false,
-                    cache:false,
-                    type:"POST",
-                    success:function(result){
-                        alert(result.msg);
-                        $('#errmsg').show().html(result.msg)
-                        if(result.code==200){
-                           // alert("注册成功");
-                            $(location).attr('href', '/login');
-                        }else{
-                            //alert("错误!");
-                            return false;
-                        }
-                    }
-                });
-            })
-        })
-    </script>
     <style type="text/css">
         body{//清除样式,设置字体和背景
             margin: 0;
@@ -73,7 +46,7 @@
             width: 280px;
             border-color: #2ecc71;
         }
-        .box input[type="button"]{
+        .box input[type="button"],.box input[type="submit"]{
             border: 0;
             background: none;
             display: block;
@@ -103,11 +76,14 @@
             transition: 0.25s;
             cursor: pointer;
         }
-        .box input[type="button"]:hover{
+        .box input[type="button"]:hover, .box input[type="submit"]:hover{
             background:#2ecc71 ;
         }
         .box input[type="reset"]:hover{
             background:#2ecc71 ;
+        }
+        .box span{
+            color:red;
         }
         #errmsg{
             display: none;
@@ -118,16 +94,48 @@
 </head>
 <body>
 
-<div id="app">
-    <form class="box">
-        <h1>注册</h1>
-        用户名<input type="text" id="username" placeholder="Enter the Username">
-        密码<input type="password" id="password" placeholder="Enter the Password">
-        <input type="button" id="btnSignin" onclick="location.href='/regist'"  value="注册">
-        <input type="reset" @click="login" value="重置">
 
+<div id="app">
+    <form class="box"  method="POST" th:object="${user}" th:action="@{/regist_submit2}">
+
+        <!-- 验证失败 -->
+        <div th:if="${#fields.hasErrors()}">
+            <span class="validationError">
+            </span>
+        </div>
+
+        <div th:switch="${result.code}">
+            <!-- 注册失败显示出错信息：用户已被注册 -->
+            <span th:case="302" th:text="${result.msg}"></span>
+            <!-- 注册成功弹窗提示并跳转 -->
+            <div th:case="200">
+                <script>
+                    alert("注册成功！");
+                    window.location.href="/login";
+                </script>
+            </div>
+        </div>
+
+
+        <h1>注册</h1>
+        <h2>用户名</h2>
+        <input type="text" th:field="*{name}" id="username" placeholder="Enter the Username">
+        <span color="red"  class="validationError" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+
+        <br />
+
+        <h2>密码</h2>
+        <input type="password" th:field="*{passwd}" id="password" placeholder="Enter the Password">
+        <span class="validationError" th:if="${#fields.hasErrors('passwd')}" th:errors="*{passwd}"></span>
+
+        <br />
+
+        <input type="submit" id="btnSignin"  value="注册">
+        <input type="reset" @click="login" value="重置">
+        <br />
     </form>
 </div>
-<div id="errmsg"></div>
+<div id="errmsg" ></div>
+
 </body>
 </html>
