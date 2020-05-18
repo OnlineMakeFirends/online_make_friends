@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
       <meta http-equiv="refresh">
       <title>登录</title>
@@ -36,6 +37,7 @@
             padding: 0;
             font-family: sans-serif;
             background: #34495e;
+            color:white;
         }
         .box{
             width: 300px;
@@ -106,6 +108,9 @@
         .box input[type="reset"]:hover{
             background:#2ecc71 ;
         }
+        .box span{
+            color:red;
+        }
         #errmsg{
             display: none;
             color: red;
@@ -116,18 +121,28 @@
 
 
 <body>
+
+
     <div id="app">
+
         <form class="box">
             <h1>登录</h1>
+            <div th:if="${session.SPRING_SECURITY_CONTEXT != null}">
+            已登录：
+            <span th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></span>
+        </div>
+            <div th:if="${session.SPRING_SECURITY_CONTEXT == null}">
+                <span >状态：未登录</span>
+            </div>
             <input type="text" id="username" placeholder="Enter the Username">
             <input type="password" id="password" placeholder="Enter the Password">
             <input type="button" id="btnSignin" onclick="location.href='/regist'"  value="注册">
             <input type="button" id="btnLogin" value="登录">
 
             <input type="reset" @click="login" value="重置">
-
         </form>
     </div>
+
     <div id="errmsg"></div>
 </body>
 </html>

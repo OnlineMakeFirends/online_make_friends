@@ -51,19 +51,19 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(userLoginAuthenticationFailureHandler) // 自定义登录失败处理
                 .and()
                 .authorizeRequests()  //定义哪些url需要保护，哪些url不需要保护
-                .antMatchers("/").authenticated()
-                .antMatchers("/home").authenticated()
+                //.antMatchers("/").authenticated()
+                //.antMatchers("/home").authenticated()
                 .and()
                 .sessionManagement().maximumSessions(1)
                 .and()
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl("/")
                 .deleteCookies("JSESSIONID")    //退出时要删除的Cookies的名字
                 .and()
                 .formLogin()
-                .loginPage("/login")  //定义当需要用户登录时候，转到的登录页面
+                .loginPage("/")  //定义当需要用户登录时候，转到的登录页面
                 .loginProcessingUrl("/login_check")  // 自定义的登录接口
 
                 .permitAll()

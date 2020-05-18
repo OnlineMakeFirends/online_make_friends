@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <title> radio_click2.html </title>
     <meta charset="utf-8" />
@@ -9,6 +8,13 @@
 
 <body>
     <h4> Fruit Shop</h4>
+    用户名：
+
+    <div sec:authorize="#{isAuthenticated()}">
+        <span th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></span>
+    </div>
+    <span th:text="${session.SPRING_SECURITY_CONTEXT}"></span>
+
     <form id="myForm" action="">
         <p>
             <label> 
