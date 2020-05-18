@@ -1,0 +1,83 @@
+/*_________________________ color yellow ______________________*/
+.clr1,
+.footer-nav ul li a:hover,
+.page-info ul li a:hover,
+.list-btn.active, .grid-btn.active,
+.slider-txt h1 span,
+.block-stl1:hover span,
+.overlay-design.home2 .block-stl2 .txt-block h3,
+.easy-connect.home2 .connect-block h3,
+.r-footer2 .footer-block .footer-head h3,
+.r-footer2 .link,
+.copyright p a:hover,
+.blog-txt .inner-txt-block .c-btn:hover  {
+	color: #fdb813;
+}
+
+.login-nav,
+.btn2:hover,
+.filter-nav .btn1.active,
+.filter-nav .btn1:hover,
+.subscribe-btn,
+.chat-box .head,
+.chat2 p,
+/*.online-side-nav .nano .nav-btn,*/
+
+.newsleter .form-group .subscribe-btn:hover,
+.btn3:hover,
+.btn5:hover,
+.block-syl1:hover i,
+.go-to-top.goto,
+.block-syl1 i   {
+  background: #fdb813;
+}
+
+
+.btn2:hover,
+.filter-nav .btn1.active,
+.btn3:hover,
+.go-to-top,
+.newsleter .form-group .subscribe-btn:hover,
+.newsleter.footer-block .form-group .form-control:focus {
+	border-color: #fdb813;
+}
+
+.main-nav.home2 .login-nav ul li a:before {
+	background: #fbc84f;
+}
+
+/*_________________________ color red ______________________*/
+.title1 h2,
+.connect-block h3,
+.online-member .title2 h2,
+.sarch-member-btn i:before,
+.search-form .inner-wrapper label span,
+.search-result-area .title2 h2,
+.lamour-suggest .title2 h2,
+.om-m-now .title2 h2,
+.popular-country .title2 h2,
+.send-note .title2 h2,
+.block-stl5:hover .txt-block h3,
+.btn1:hover,
+.clr2,
+.footer-block .list-unstyled a:hover {
+	color: #f04040;
+}
+
+.banner .owl-theme .owl-next:hover,
+.banner .owl-theme .owl-prev:hover,
+.newsleter .form-group .subscribe-btn,
+.online-side-nav .nano .nav-btn,
+.btn1,
+.easy-connect.home2 .btn2:hover,
+.copyright.stl2 .overlay,
+.main-nav .overlay {
+	background: #f04040;
+}
+
+.btn1,
+.btn1:hover,
+.easy-connect.home2 .btn2:hover,
+.newsleter .form-group .subscribe-btn {
+	border-color: #f04040;
+}

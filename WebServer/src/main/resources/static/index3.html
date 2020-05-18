@@ -1,0 +1,855 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home3 | Lamour - Dating Social Network Website HTML5 Template</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+	<link rel="icon" href="images/fav.png" type="image/x-icon">
+	<!-- font-awesome -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- main stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive css -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- color css -->
+	<link rel="stylesheet" href="css/colors3.css">
+</head>
+<body>
+	<!-- Loader -->
+	<div class="loader_wrapper stl2" id="page-preloader">
+		<div class="loader-center">		
+			<div class="spinner">
+				<div class="heart heart1"></div>
+				<div class="heart heart2"></div>
+				<div class="heart heart3"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<header class="new-block header home3">
+			<div class="topnav new-block">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="left-nav">
+								<div class="select-country">
+									<select class="nice-select">
+										<option value="0">Hindi</option>
+										<option value="1">English</option>
+									</select>
+								</div>
+								<div class="select-inr">
+									<select class="nice-select">
+										<option value="0">INR</option>
+										<option value="1">Usd</option>
+									</select>
+								</div>
+							</div>
+							<div class="right-nav">
+								<span class="top-nav-signup_ligin"><a href="#">SignUp</a> / <a href="#">Login</a></span>
+								<a href="#" class="support-num">Support Number : +1 (123 ) 456 789</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-nav new-block">
+				<div class="container-fluid pad0">
+					<div class="row no-gutters">
+						<div class="col-lg-12">
+							<div class="logo">
+								<a href="../templates/home.html"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
+							</div>
+							<a href="#" class="nav-opener"><i class="fa fa-bars"></i></a>
+							<div class="nav-block">
+								<nav class="nav">
+									<ul class="list-unstyled">
+										<li class="active drop"><a href="#">Home</a>
+											<ul class="drop-down">
+												<li><a href="../templates/index.html">Home 1</a></li>
+												<li><a href="index2.html">Home 2</a></li>
+												<li><a href="index3.html">Home 3</a></li>
+											</ul>
+										</li>
+										<li><a href="../templates/search_girls.html">Girls</a></li>
+										<li><a href="../templates/search_girls.html">Boys</a></li>
+										<li><a href="../templates/online_search_result.html">Online Users</a></li>
+										<li><a href="../templates/online_search_country.html">Countries</a></li>
+										<li><a href="../templates/search_by_map.html">All World</a></li>
+										<li><a href="#">Filter Profile</a></li>
+										<li><a href="../templates/blog.html">Blog</a></li>
+										<li><a href="about_us.html">About us</a></li>
+										<li><a href="contact_us.html">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header> <!-- header -->
+
+		<div class="banner home3 new-block">
+			<div class="slider1 slider-stl">
+			    <div class="item">
+			    	<video autoplay muted loop id="myVideo">
+					  <source src="videos/vid2.mp4" type="video/mp4">
+					  Your browser does not support HTML5 video.
+					</video>
+					<div class="fixed-bg vid-thumb" style="background:url('videos/vid-thumb.jpg');"></div>
+					<div class="fixed-bg"><canvas id="sky"></canvas></div>
+					<div class="slider-block new-block">
+			    		<div class="overlay"></div>
+				    	<div class="container">
+				    		<div class="row">
+				    			<div class="col-lg-12">
+				    				<div class="slider-txt">
+				    					<div class="new-block cover-block">
+				    						<h1>100% Free Online Dating</h1>
+				    					</div><!-- cover-block -->
+				    					<div class="new-block cover-block">
+				    						<p>Connecting singles across the world</p>
+				    					</div><!-- cover-block -->
+				    					<div class="new-block cover-block">
+				    						<div class="btn-cover">
+				    							<a href="#" class="c-btn btn-fb"><i class="flaticon-social-facebook-circular-button"></i> Sign In</a>
+				    						</div>
+				    						<div class="btn-cover">
+				    							<a href="#" class="c-btn btn-gplus"><img src="images/gpluse.png" alt=""> <span>Sign In</span></a>
+				    						</div>
+				    					</div><!-- cover-block -->
+				    				</div>
+				    			</div>
+				    			<div class="col-lg-5 col-md-5"><!-- logo-block -->
+				    				
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+
+		<div class="overlay-design home3 new-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="search-box">
+							<div class="inner-wrapper">
+								<form>
+									<div class="c-grid">
+										<label>I am a :</label>
+		    							<div class="form-group">
+		    								<select>
+		    									<option value="" selected>Choose Your Preferences</option>
+		    									<option value="">Male</option>
+		    									<option value="">Female</option>
+		    									<option value="">Other</option>
+		    								</select>
+		    							</div>
+									</div>
+									<div class="c-grid">
+		    							<label>Between Age :</label>
+		    							<div class="age-block">
+		    								<div class="form-group">
+			    								<select>
+			    									<option value="" selected>18</option>
+			    									<option value="">19</option>
+			    									<option value="">20</option>
+			    									<option value="">21</option>
+			    									<option value="">22</option>
+			    								</select>
+			    							</div>
+			    							<div class="form-group">
+			    								<select>
+			    									<option value="" selected>30</option>
+			    									<option value="">31</option>
+			    									<option value="">32</option>
+			    									<option value="">33</option>
+			    									<option value="">34</option>
+			    								</select>
+			    							</div>
+		    							</div>
+		    						</div>
+		    						<div class="c-grid">
+		    							<div class="form-group">
+		    								<a href="#" class="c-btn btn1">Take a Chance</a>
+		    							</div>
+		    						</div>
+	    						</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<section class="search-by-map home3 new-block">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-lg-push-6 col-md-push-6">
+						<div class="map-txt-block">
+							<div class="inner-content-wrapper">
+								<div class="title1">
+									<h2 class="fz35">Your partner near with you :</h2>
+									<p class="fz20">Connecting singles across the world to their ideal partner</p>
+								</div>
+								<p class="fz20">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor tristique mattis. Vestibulum pretium eleifend risus, scelerisque neque rhoncus in.</p>
+
+								<p class="fz20">Curabitur volutpat rhoncus diam. Sed ac hendrerit Aliquam vestibulum augue in tortor ultrices blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra</p>
+							</div>
+						</div>	
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 pd0 col-lg-pull-6 col-md-pull-6">
+						<div class="map-section map-area">
+							<div id="map1">
+								
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="services home3 new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="title2">
+							<h2 class="fz35">Our some special services</h2>
+							<div class="clearfix"></div>
+							<p class="fz20">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor<br> mattis ullamcorper urna. Cras quis elementum</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-protection-shield-with-a-check-mark"></i>
+							<p>Protection</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-circle"></i>
+							<p>Verification</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-love"></i>
+							<p>Attention</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-multimedia"></i>
+							<p>Communication</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-marriage-rings-couple-with-a-heart"></i>
+							<p>Unique Matching</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-profile"></i>
+							<p>Real People</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-locked-mail"></i>
+							<p>Private Messaging</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="block-syl1">
+							<i class="flaticon-credit-card"></i>
+							<p>Secure Payment</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- .services -->
+
+
+		<section class="why-join home3 new-block">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="why-join-inner-w">
+							<div class="title2">
+								<h2 class="fz35">Why Join Lamour :</h2>
+								<div class="clearfix"></div>
+								<p class="fz20">Connecting singles across the world <br>to their ideal partner</p>
+							</div>
+							<div class="block-stl1">
+								<p class="fz20"><span class="clr1">There's tons of singles.</span> We're one of the biggest dating sites on earth, and it's all totally free.</p>
+							</div>
+
+							<div class="block-stl1">
+								<p class="fz20"><span class="clr1">No fakes.</span> We strictly monitor who uses our site, and you can easily block people who you don't want to talk to</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 pd0">
+						<div class="img-block">
+							<div class="img-holder">
+								<div class="fixed-bg" style="background: url('images/img48.jpg');"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- why-join -->
+
+		<section class="new-member stl2 new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title2">
+							<h2 class="fz35">New Member Join Lamour</h2>
+							<div class="clearfix"></div>
+							<p class="fz20">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor<br> mattis ullamcorper urna. Cras quis elementum</p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img12.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img13.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img14.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img15.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img16.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img17.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img18.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img19.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img20.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img21.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img22.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img23.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class="col-lg-12">
+						<div class="text-center">
+							<a href="#" class="c-btn btn3">View More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="online-member home3 new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title2">
+							<h2 class="fz35">Members Online Now</h2>
+							<div class="clearfix"></div>
+							<p class="fz20">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor<br> mattis ullamcorper urna. Cras quis elementum</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img1.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img2.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / M / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img3.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+						<div class="block-stl2">
+							<div class="img-holder">
+								<img src="images/img4.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="txt-block">
+								<a href="#">
+									<h3 class="fz22">Tenma Shyna</h3>
+									<p>22 / F / Philippines	</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- online-member -->
+
+		<section class="success-stories new-block pdt-100">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title2">
+							<h2 class="fz35">Success Stories</h2>
+							<div class="clearfix"></div>
+							<p class="fz20">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor<br> mattis ullamcorper urna. Cras quis elementum</p>
+						</div>
+					</div>
+					<div class="col-lg-12 pd0">
+						<div class="success-stories-slider owl-carousel owl-theme">
+							<div class="item">
+								<div class="block-stl6 stl1">
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img51.jpg');"></div>
+									</div>
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl2">
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img52.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl1">
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img53.jpg');"></div>
+									</div>
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl2 stl2">
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img54.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl1">
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img55.jpg');"></div>
+									</div>
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl2">
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img56.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl1">
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img53.jpg');"></div>
+									</div>
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="block-stl6 stl2">
+									<div class="txt-block">
+										<div class="inner-wrapper">
+											<i class="flaticon-left-quote"></i>
+											<p class="about-story">Cras eu porta urna, eu convallis erat. Fusce eget bibendum diam at ornare enim. Etiam </p>
+											<i class="flaticon-right-quotation-sign"></i>
+										</div>
+									</div>
+									<div class="img-holder">
+										<div class="fixed-bg" style="background: url('images/img54.jpg');"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="client-area home3 new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="block-stl4">
+							<i class="flaticon-happiness"></i>
+							<p class="fz20">Happy Clients</p>
+							<div class="counter-block"><span class="counter">3224</span></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="block-stl4">
+							<i class="flaticon-people"></i>
+							<p class="fz20">All Members</p>
+							<div class="counter-block"><span class="counter">474</span></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="block-stl4">
+							<i class="flaticon-users"></i>
+							<p class="fz20">Online User</p>
+							<div class="counter-block"><span class="counter">241</span></div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="block-stl4">
+							<i class="flaticon-circle"></i>
+							<p class="fz20">Happy Dating</p>
+							<div class="counter-block"><span class="counter">545</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="easy-connect home3 new-block pdtb-100">
+			<div class="fixed-bg parallax" style="background: url('images/img49.jpg');"></div>
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<div class="connect-block">
+							<h3>easy connect <span>to everyone</span></h3>
+							<p class="fz35">Nulla a tempus turpis. Duis lacinia a est eu pulvinar. <br>Nullam justo velit, vulputate et massa eu, viverra suscipit purus.</p>
+							<a href="#" class="c-btn-ico btn1"><img src="images/android.png" alt=""><span>Get it on Google Play</span></a>
+							<a href="#" class="c-btn-ico btn2"><i class="flaticon-apple"></i><span>Get it on the App Store</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	
+		<footer class="r-footer2 home3 new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="footer-block">
+							<div class="footer-head">
+								<img src="images/f-logo.png" alt="" class="f-logo img-responsive">
+							</div>
+							<p class="f-about-txt">Aliquam a neque tDoneiaculis auctor turpis.Eportttristique mattis Vestibulum pretm.</p>
+							<a href="#" class="link">rewebso@gmail.com</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="footer-block pdleft25">
+							<div class="footer-head">
+								<h3>About Us :</h3>
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="#">Help Center</a></li>
+								<li><a href="#">Online Members</a></li>
+								<li><a href="#">New Members</a></li>
+								<li><a href="#">Online Payment</a></li>
+								<li><a href="#">Members Plan</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="footer-block pdleft25">
+							<div class="footer-head">
+								<h3>Quick Links :</h3>
+							</div>
+							<ul class="list-unstyled">
+								<li><a href="#">How we works</a></li>
+								<li><a href="#">Our Tutorials</a></li>
+								<li><a href="#">New Members</a></li>
+								<li><a href="#">Online Payment</a></li>
+								<li><a href="#">Members Plan</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6">
+						<div class="footer-block newsleter">
+							<div class="footer-head">
+								<h3>Subscribe Newsletter :</h3>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Email Address">
+								<a href="#" class="subscribe-btn">Subscribe</a>
+							</div>
+
+							<div class="social-nav">
+								<ul>
+									<li class="tw"><a href="#"><i class="flaticon-twitter"></i></a></li>
+									<li class="fb"><a href="#"><i class="flaticon-facebook-logo"></i></a></li>
+									<li class="gp"><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+									<li class="rss"><a href="#"><i class="flaticon-rss-symbol"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="copyright home3 stl2 new-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="copyright-nav">
+							<ul class="list-unstyled">
+								<li><a href="#">2345698 Total Members</a></li>
+								<li><a href="#">245698 online Members</a></li>
+								<li><a href="#">22456 happy Members</a></li>
+							</ul>
+						</div>
+						<p>2018 Design By <a href="http://www.bootstrapmb.com/"> Rewebso </a> All Rights</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span id="go_to_top" class="go-to-top"><i class="fa fa-long-arrow-up"></i></span>
+	</div>
+
+
+
+	<!-- Include jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Plugins -->
+	<script src="js/plugins.js"></script>
+	<!-- Googleapis -->
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo"></script>
+	<!-- Custom -->
+	<script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+.services.home3 .title2 h2,
+.why-join.home3 .title2 h2,
+.search-by-map.home3 .title1 h2,
+.new-member .title2 h2,
+.easy-connect.home3 .connect-block h3,
+.success-stories .title2 h2,
+.search-box .inner-wrapper .c-grid label,
+.blog-txt .inner-txt-block .c-btn:hover,
+.online-member.home3 .title2 h2 {
+	color: #1cb5e6;
+}
+
+.main-nav {
+	background: #1cb5e6;
+}
+
+.r-footer2.home3 .newsleter .form-group .form-control:focus,
+.search-box .inner-wrapper .c-grid .form-group .nice-select.open {
+	border-color: #1cb5e6;
+}
+
+
+/*============== COlor 2 ==============*/
+.services.home3 .block-syl1:hover p,
+.why-join.home3 .block-stl1 p>.clr1,
+.btn3:hover,
+.client-area.home3 .block-stl4 i:before,
+.copyright.home3 .copyright-nav li a ,
+.copyright.home3 p,
+.r-footer2.home3 .link,
+.newsleter .form-group .subscribe-btn:hover,
+.footer-block .list-unstyled a:hover,
+.search-box .inner-wrapper .c-grid .btn1:hover {
+	color: #4caf50;
+}
+
+
+.services.home3 .block-syl1:hover i,
+.btn3,
+.newsleter .form-group .subscribe-btn,
+.go-to-top.goto,
+.search-box .inner-wrapper .c-grid .btn1 {
+	background: #4caf50;
+}
+
+.services.home3 .block-syl1:hover,
+.btn3,
+.newsleter .form-group .subscribe-btn,
+.go-to-top.goto,
+.search-box .inner-wrapper .c-grid .btn1 {
+	border-color: #4caf50;
+}

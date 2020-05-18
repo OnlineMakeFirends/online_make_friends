@@ -19,6 +19,7 @@
     </properties>
 
     <dependencies>
+
         <!-- 整合spring security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

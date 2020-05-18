@@ -1,0 +1,88 @@
+/*_________________________ color red ______________________*/
+.btn1:hover,.clr2,
+.footer-nav ul li a:hover,
+.page-info ul li a:hover,
+.list-btn.active, .grid-btn.active,
+.block-stl1:hover span,
+.member-name .nav-tabs>li.active>a,
+.member-name .nav-tabs>li:hover>a,
+.member-name .nav-tabs>li.active>a:focus,
+.inner-block1.profile-vid .friend-photo .vid-ico:hover i:before,
+.profile-contact li a:hover,
+.tags-block ul li a:hover ,
+.comment:hover .share i:before,
+.our-history h3,
+.blog-txt .inner-txt-block .c-btn:hover  {
+	color: #f05151;
+}
+
+.login-nav,
+.main-nav .overlay,
+.btn1,
+.btn2:hover,
+.filter-nav .btn1.active,
+.filter-nav .btn1:hover,
+.subscribe-btn,
+.chat-box .head,
+.chat2 p,
+.msg_head,
+.btn3:hover,
+.btn5:hover,
+.block-syl1:hover i,
+.go-to-top.goto,
+.custome-chart .list-unstyled li .graph:hover,
+.blog_slider.owl-carousel .owl-nav button.owl-next, .blog_slider.owl-carousel .owl-nav button.owl-prev   {
+  background: #f05151;
+}
+
+.btn1,
+.btn2:hover,
+.btn1:hover,
+.filter-nav .btn1.active,
+.newsleter .form-group .subscribe-btn,
+.btn3:hover {
+	border-color: #f05151;
+}
+
+
+
+/*_________________________ color yellow ______________________*/
+.slider-txt h1 span,
+.title1 h2,
+.clr1,
+.connect-block h3,
+.online-member .title2 h2,
+.sarch-member-btn i:before,
+.search-form .inner-wrapper label span,
+.search-result-area .title2 h2,
+.lamour-suggest .title2 h2,
+.leave-replay .title2 h2,
+.om-m-now .title2 h2,
+.popular-country .title2 h2,
+.send-note .title2 h2,
+.block-stl5:hover .txt-block h3,
+.comment .share:hover i:before,
+.about-us .txt-block h2,
+.services.au-block .block-syl1 .counter {
+	color: #fdb813;
+}
+
+.block-syl1 i,
+.banner .owl-theme .owl-next:hover,
+.banner .owl-theme .owl-prev:hover,
+.newsleter .form-group .subscribe-btn:hover,
+.online-side-nav .nano .nav-btn,
+.custome-chart .list-unstyled li .graph,
+.online-side-nav .nav-btn {
+	background: #fdb813;
+}
+
+
+.newsleter .form-group .subscribe-btn:hover,
+.newsleter .form-group .form-control:focus,
+.introducing-block .inner-wrapper .nice-select.open,
+.search-form .inner-wrapper .nice-select.open,
+.send-note .form-control:focus,
+.leave-replay .from-group .form-control:focus {
+	border-color: #fdb813;
+}

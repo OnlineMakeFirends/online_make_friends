@@ -1,0 +1,89 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 31/08/2018 13:13
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-trophy:before { content: "\f100"; }
+.flaticon-auricular-phone-symbol-in-a-circle:before { content: "\f101"; }
+.flaticon-menu-options:before { content: "\f102"; }
+.flaticon-circle:before { content: "\f103"; }
+.flaticon-google-plus-logo:before { content: "\f104"; }
+.flaticon-left-quote:before { content: "\f105"; }
+.flaticon-right-quotation-sign:before { content: "\f106"; }
+.flaticon-menu-button-of-three-horizontal-lines:before { content: "\f107"; }
+.flaticon-social-facebook-circular-button:before { content: "\f108"; }
+.flaticon-facebook-logo-in-circular-button-outlined-social-symbol:before { content: "\f109"; }
+.flaticon-speech-bubble-outline-of-rectangular-shape:before { content: "\f10a"; }
+.flaticon-marriage-rings-couple-with-a-heart:before { content: "\f10b"; }
+.flaticon-man-user:before { content: "\f10c"; }
+.flaticon-rss-symbol:before { content: "\f10d"; }
+.flaticon-whatsapp-logo:before { content: "\f10e"; }
+.flaticon-multiple-users-silhouette:before { content: "\f10f"; }
+.flaticon-locked-mail:before { content: "\f110"; }
+.flaticon-protection-shield-with-a-check-mark:before { content: "\f111"; }
+.flaticon-envelope:before { content: "\f112"; }
+.flaticon-happiness:before { content: "\f113"; }
+.flaticon-search:before { content: "\f114"; }
+.flaticon-like:before { content: "\f115"; }
+.flaticon-users:before { content: "\f116"; }
+.flaticon-chat:before { content: "\f117"; }
+.flaticon-price-tag:before { content: "\f118"; }
+.flaticon-cancel:before { content: "\f119"; }
+.flaticon-list:before { content: "\f11a"; }
+.flaticon-user:before { content: "\f11b"; }
+.flaticon-people:before { content: "\f11c"; }
+.flaticon-levels-adjusment:before { content: "\f11d"; }
+.flaticon-playstore:before { content: "\f11e"; }
+.flaticon-love:before { content: "\f11f"; }
+.flaticon-menu:before { content: "\f120"; }
+.flaticon-credit-card:before { content: "\f121"; }
+.flaticon-up-arrow:before { content: "\f122"; }
+.flaticon-shopping:before { content: "\f123"; }
+.flaticon-add-user:before { content: "\f124"; }
+.flaticon-india-rupee-currency-symbol:before { content: "\f125"; }
+.flaticon-phone-receiver:before { content: "\f126"; }
+.flaticon-old-handphone:before { content: "\f127"; }
+.flaticon-apple:before { content: "\f128"; }
+.flaticon-twitter:before { content: "\f129"; }
+.flaticon-facebook-logo:before { content: "\f12a"; }
+.flaticon-share-option:before { content: "\f12b"; }
+.flaticon-circular-shape-silhouette:before { content: "\f12c"; }
+.flaticon-facetime-button:before { content: "\f12d"; }
+.flaticon-heart-shaped-lock-outline:before { content: "\f12e"; }
+.flaticon-avatar:before { content: "\f12f"; }
+.flaticon-facebook-placeholder-for-locate-places-on-maps:before { content: "\f130"; }
+.flaticon-settings:before { content: "\f131"; }
+.flaticon-play-button:before { content: "\f132"; }
+.flaticon-clock:before { content: "\f133"; }
+.flaticon-multimedia:before { content: "\f134"; }
+.flaticon-down-arrow:before { content: "\f135"; }
+.flaticon-left-arrow:before { content: "\f136"; }
+.flaticon-profile:before { content: "\f137"; }
+.flaticon-edit:before { content: "\f138"; }
+.flaticon-close-envelope:before { content: "\f139"; }
