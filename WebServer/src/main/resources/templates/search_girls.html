@@ -120,6 +120,8 @@
 							<th>city</th>
 							<th>age</th>
 							<th>education</th>
+							<th>image</th>
+
 						</tr>
 					</thead>
 					<tbody>
@@ -128,6 +130,8 @@
 							<td></td>
 							<td></td>
 							<td></td>
+							<td></td>
+
 						</tr>
 					</tbody>
 				</table>
@@ -236,6 +240,7 @@
 								d.push(json[i].city)
 								d.push(json[i].age)
 								d.push(json[i].education)
+								d.push("<img src='images/img"+ json[i].id+".jpg'>")
 								ret.push(d)
 							}
 							console.log(ret);
@@ -246,6 +251,7 @@
 							{data: 'city'},
 							{data: 'age'},
 							{data: 'education'},
+							{data: 'image'}
 						],
 
 					}
