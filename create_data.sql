@@ -25,3 +25,5 @@ insert into user values (9, 'sunyanjie8', 'Ů','123456', 'nanjing', 30, 'studyin
 insert into user values (10, 'sunyanjie9', 'Ů','123456', 'nanjing', 31, 'studying');
 insert into user values (11, 'sunyanjie10', 'Ů','123456', 'nanjing', 15,'studying');
 insert into user values (12, 'sunyanjie11', 'Ů','123456', 'nanjing', 17, 'studying');
+insert into user values (13, 'sunyanjie12', 'Ů','123456', 'hangzhou', 15,'studying');
+insert into user values (14, 'sunyanjie13', 'Ů','123456', 'beijing', 17, 'studying');

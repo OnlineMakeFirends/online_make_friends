@@ -22,13 +22,13 @@ public interface userDao {
 
     @Select({"<script>",
             "select * from user where 1=1" +
-            "<when test='city != null'>" +
+            "<when test='!city.isEmpty()'>" +
             " and city=#{city}" +
             "</when>" +
             "<when test='age != null'>" +
             " and #{age} > age" +
             "</when>" +
-            "<when test='education != null'>" +
+            "<when test='!education.isEmpty()'>" +
             " and #{education} = education" +
             "</when>",
             "</script>"})
