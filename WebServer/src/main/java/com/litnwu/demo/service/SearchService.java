@@ -1,25 +1,23 @@
 package com.litnwu.demo.service;
 
-
+import com.litnwu.demo.dao.userDao;
 import com.litnwu.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.litnwu.demo.dao.userDao;
+
+import java.util.List;
 
 @Service
-public class UserService {
+public class SearchService {
     private final userDao userDao;
     @Autowired
-    public UserService(userDao userDao) {
+    public SearchService(userDao userDao) {
         this.userDao = userDao;
     }
 
-    public User findByName(String name)
+    public List<User> Search(String city, Integer age, String education)
     {
-        return  userDao.Login(name);
+        return  userDao.Search(city, age, education);
     }
 
-    public void regist(String name,String passwd){
-        userDao.register(name,passwd);
-    }
 }

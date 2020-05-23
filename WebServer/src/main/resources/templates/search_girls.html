@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html  xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Girls For Dating | Lamour - Dating Social Network Website HTML5 Template</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+	<link rel="icon" href="images/fav.png" type="image/x-icon">
+	<!-- font-awesome -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- main stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive css -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- color css -->
+	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header class="new-block header">
+			<div class="main-nav new-block">
+				<div class="overlay"></div>
+				<div class="container-fluid pad0">
+					<div class="row no-gutters">
+						<div class="col-lg-12">
+							<div class="logo">
+								<a href="/"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
+							</div>
+							<a href="#" class="nav-opener"><i class="fa fa-bars"></i></a>
+							<div class="nav-block">
+								<nav class="nav">
+									<ul class="list-unstyled">
+										<li><a href="/">首页</a></li>
+										<li><a href="search_girls">在线匹配</a></li>
+										<li><a href="search_girls.html">自主择友</a></li>
+										<li><a href="online_search_result.html">游戏娱乐</a></li>
+										<li><a href="online_search_country.html">运动健身</a></li>
+										<li><a href="blog.html">博客</a></li>
+										<li><a href="../static/about_us.html">关于我们</a></li>
+										<li><a href="../static/contact_us.html">联系我们</a></li>
+
+										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
+											<li class="active drop">
+												<a href="#" th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></a>
+												<ul class="drop-down">
+													<li><a href="/logout">注销</a></li>
+												</ul>
+											</li>
+										</span>
+										<!--
+										<span th:if="${session.SPRING_SECURITY_CONTEXT == null}">
+											<li><a href="/regist">注册</a></li>
+											<li><a href="login">登录</a></li>
+											-->
+
+										</span>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="search-form new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="inner-wrapper">
+							<form>
+								<div class="row">
+									<div class="col-lg-4 col-md-4">
+										<label>
+											City:
+											<select id="city">
+												<option value="">nanjing</option>
+												<option value="">hangzhou</option>
+												<option value="" selected>beijing</option>
+											</select>
+										</label>
+									</div>
+
+									<div class="col-lg-4 col-md-4">
+										<label>Age :<input id="age" /> </label>
+									</div>
+
+									<div class="col-lg-4 col-md-4">
+										<label>Education :
+		    								<select id="education">
+		    									<option value="" selected>graduate</option>
+		    									<option value="">Post Graduate</option>
+		    									<option value="">studying</option>
+		    								</select></label>
+									</div>
+									<div class="text-center">
+										<button  id="text-center" style="background:url();">Search</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="search-result-area new-block pdtb-100">
+			<div class="container">
+				<table id="table_id" class="display">
+					<thead>
+						<tr>
+							<th>name</th>
+							<th>city</th>
+							<th>age</th>
+							<th>education</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section><!--  -->
+
+		<footer class="r-footer new-block pdtb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="newsleter">
+							<div class="title2">
+								<h2 class="clr1 fz35">Subscribe Newsleter</h2>
+								<div class="clearfix"></div>
+								<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Email Address">
+								<a href="#" class="subscribe-btn">Subscribe</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="footer-nav">
+							<ul class="list-unstyled">
+								<li><a href="home.html">Home</a></li>
+								<li><a href="search_girls.html">Girls</a></li>
+								<li><a href="search_girls.html">Boys</a></li>
+								<li><a href="#">Online Users</a></li>
+								<li><a href="online_search_country.html">Countries</a></li>
+								<li><a href="search_by_map.html">All World</a></li>
+								<li><a href="online_search_result.html">Filter Profile</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="../static/contact_us.html">About us</a></li>
+								<li><a href="../static/contact_us.html">Contact Us</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="copyright new-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="social-nav">
+							<ul>
+								<li class="tw"><a href="#"><i class="flaticon-twitter"></i></a></li>
+								<li class="fb"><a href="#"><i class="flaticon-facebook-logo"></i></a></li>
+								<li class="gp"><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+								<li class="rss"><a href="#"><i class="flaticon-rss-symbol"></i></a></li>
+							</ul>
+						</div>
+						<p>2018 Design By <a href="http://www.bootstrapmb.com/"> Rewebso </a> All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<span id="go_to_top" class="go-to-top"><i class="fa fa-long-arrow-up"></i></span>
+
+	</div>
+
+
+	<!-- Plugins -->
+	<!--script src="js/plugins.js"></script-->
+	<!-- Googleapis -->
+	<!--script src="http://ditu.google.cn/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo"></script-->
+	<!-- Custom -->
+	<!--script src="js/custom.js"></script-->
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+/*		$("#age").ionRangeSlider({
+			type: "double",
+			min: 100,
+			max: 1100,
+			from: 200,
+			to: 700,
+			step:100,
+			hide_min_max: true,
+			grid: true
+		});
+*/
+		$("button").click(function(){
+			$('#table_id').dataTable({
+				destroy: true,
+					ajax : {
+						"type": "post",
+						"url": "search",
+						"data" : {
+							"city" : $("#city option:selected").text(),
+							"age" : $("#age").val(),
+							"education" : $("#education option:selected").text()
+						},
+
+						"dataSrc" : function ( json ) {
+							var ret = []
+							for (var i = 0; i < json.length; i++) {
+								var d = []
+								d.push(json[i].name)
+								d.push(json[i].city)
+								d.push(json[i].age)
+								d.push(json[i].education)
+								ret.push(d)
+							}
+							console.log(ret);
+							return ret;
+						},
+						columns: [
+							{data: 'name'},
+							{data: 'city'},
+							{data: 'age'},
+							{data: 'education'},
+						],
+
+					}
+				}
+			)
+			return false;
+		});
+	});
+
+</script>
+</html>

@@ -29,7 +29,7 @@ public class RegistpageController {
 
     @GetMapping("/regist")
     public String registPage(Model model){
-        model.addAttribute("user", new User());
+        model.addAttribute("user", new User("", ""));
         model.addAttribute("result", new JsonData(510,""));
         return "regist";
     }
@@ -45,21 +45,21 @@ public class RegistpageController {
             return "regist";
         }
 
-        System.out.println("[test]:"+user.getName()+" "+user.getPasswd());
+        System.out.println("[test]:"+user.getUsername()+" "+user.getPassword());
         try{
-            User finded_user = userService.findByName(user.getName());
+            User finded_user = userService.findByName(user.getUsername());
 
             if(finded_user != null){
                 result = new JsonData(302,"用户名已被注册！");
-                model.addAttribute("user", new User());
+                model.addAttribute("user", new User("", ""));
                 model.addAttribute("result", result);
                 return "regist";
             }
-            userService.regist(user.getName(),ENCODER.encode(user.getPasswd()));
+            userService.regist(user.getUsername(),ENCODER.encode(user.getPassword()));
         }
         catch (Exception e){
             result = new JsonData(303,"未知错误！");
-            model.addAttribute("user", new User());
+            model.addAttribute("user", new User("", ""));
             model.addAttribute("result", result);
             return "redirect:/regist";
         }
@@ -68,5 +68,6 @@ public class RegistpageController {
         model.addAttribute("result", result);
         return "regist";
     }
+
 }
 

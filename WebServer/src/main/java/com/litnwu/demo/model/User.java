@@ -31,6 +31,11 @@ public class User implements UserDetails {
     @Size(min=6,max = 20,message = "密码长度：6~20个字符！")
     private String passwd;
 
+    private String sexy;
+    private Integer age;
+    private String city;
+    private String education;
+
     public User(String name, String passwd){
         this.name = name;
         this.passwd = passwd;

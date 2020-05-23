@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>B170405在线交友系统</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+	<link rel="icon" href="images/fav.png" type="image/x-icon">
+	<!-- font-awesome -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- main stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive css -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- color css -->
+	<link rel="stylesheet" href="css/colors.css">
+	<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header class="new-block header">
+			<div th:fragment="commonNav"  class="main-nav new-block">
+				<div class="overlay"></div>
+				<div class="container-fluid pad0">
+					<div class="row no-gutters">
+						<div class="col-lg-12">
+							<div class="logo">
+								<a href="/"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
+							</div>
+							<a href="#" class="nav-opener"><i class="fa fa-bars"></i></a>
+							<div class="nav-block">
+								<nav class="nav">
+									<ul class="list-unstyled">
+										<li><a href="/">首页</a></li>
+										<li><a href="search_girls">在线匹配</a></li>
+										<li><a href="search_girls.html">自主择友</a></li>
+										<li><a href="online_search_result.html">游戏娱乐</a></li>
+										<li><a href="online_search_country.html">运动健身</a></li>
+										<li><a href="blog.html">博客</a></li>
+										<li><a href="../static/about_us.html">关于我们</a></li>
+										<li><a href="../static/contact_us.html">联系我们</a></li>
+
+										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
+											<li class="active drop">
+												<a href="#" th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></a>
+												<ul class="drop-down">
+													<li><a href="/logout">注销</a></li>
+												</ul>
+											</li>
+										</span>
+										<!--
+										<span th:if="${session.SPRING_SECURITY_CONTEXT == null}">
+											<li><a href="/regist">注册</a></li>
+											<li><a href="login">登录</a></li>
+											-->
+
+										</span>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header> <!-- header -->
+	<!-- Include jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Plugins -->
+	<script src="js/plugins.js"></script>
+
+	<!-- Googleapis
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo"></script>
+	-->
+	<!-- Custom -->
+	<script src="js/custom.js"></script>
+</body>
+</html>

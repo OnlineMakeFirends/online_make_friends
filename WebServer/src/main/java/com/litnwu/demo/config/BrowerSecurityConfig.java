@@ -19,13 +19,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CsrfFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
-
 @Configuration  //标识为配置类
 @EnableWebSecurity    //启动Spring Security的安全管理
 @EnableGlobalMethodSecurity(securedEnabled = true)
 @Slf4j
 public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
     private static final BCryptPasswordEncoder ENCODER = new BCryptPasswordEncoder();
+
 
     @Bean
     public PasswordEncoder passwordEncoder(){ //密码加密类
