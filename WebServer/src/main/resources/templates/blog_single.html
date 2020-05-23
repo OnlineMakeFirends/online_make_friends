@@ -83,10 +83,10 @@
 									<ul class="list-unstyled">
 										<li><a href="/">首页</a></li>
 										<li><a href="search_girls.html">在线匹配</a></li>
-										<li><a href="search_girls.html">自主择友</a></li>
-										<li><a href="online_search_result.html">游戏娱乐</a></li>
-										<li><a href="online_search_country.html">运动健身</a></li>
-										<li><a href="blog">博客</a></li>
+										<li><a href="post_categories_free">自主择友</a></li>
+										<li><a href="post_categories_game">游戏娱乐</a></li>
+										<li><a href="post_categories_sport">运动健身</a></li>
+										<li><a href="post_categories_blog">博客</a></li>
 										<li><a href="../static/about_us.html">关于我们</a></li>
 										<li><a href="../static/contact_us.html">联系我们</a></li>
 
@@ -149,7 +149,7 @@
 							</div>-->
 							<div class="blog-txt">
 								<div class="inner-txt-block">
-									<a th:href="@{'/blog_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}"> Nam vulputate vitae mauris at facilisis. Fusce vel eros commodo, consequat augue sit amet.</span></h2></a>
+									<a th:href="@{'/post_get_'+${categories}+'_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}"> Nam vulputate vitae mauris at facilisis. Fusce vel eros commodo, consequat augue sit amet.</span></h2></a>
 									<ul class="list-unstyled profile-contact">
 										<li><a href="#"><i class="fa fa-user"></i><span th:text="${myPost.getAuthor()}">Tenma Shyna</span></a></li>
 										<li><a href="#"><i class="fa fa-clock-o"></i>Dec 02 , 2018  06:45 pm</a></li>

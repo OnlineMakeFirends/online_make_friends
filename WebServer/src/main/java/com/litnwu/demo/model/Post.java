@@ -26,6 +26,9 @@ public class Post
 	@NotBlank(message = "标题不能为空")
 	private String title;
 
+	@NotBlank(message = "分类不能为空")
+	private String categories;
+
 	private Timestamp time;
 
 	public Post(String author, String context)

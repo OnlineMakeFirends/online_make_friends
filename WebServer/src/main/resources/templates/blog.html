@@ -82,10 +82,10 @@
 									<ul class="list-unstyled">
 										<li><a href="/">首页</a></li>
 										<li><a href="search_girls.html">在线匹配</a></li>
-										<li><a href="search_girls.html">自主择友</a></li>
-										<li><a href="online_search_result.html">游戏娱乐</a></li>
-										<li><a href="online_search_country.html">运动健身</a></li>
-										<li><a href="blog">博客</a></li>
+										<li><a href="post_categories_free">自主择友</a></li>
+										<li><a href="post_categories_game">游戏娱乐</a></li>
+										<li><a href="post_categories_sport">运动健身</a></li>
+										<li><a href="post_categories_blog">博客</a></li>
 										<li><a href="../static/about_us.html">关于我们</a></li>
 										<li><a href="../static/contact_us.html">联系我们</a></li>
 
@@ -120,27 +120,47 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="inner-wrapper">
-							<h2 class="clr1">Blog</h2>
+							<h2 class="clr1">
+								<div th:switch="${categories}">
+									<span th:case="blog">博客</span>
+									<span th:case="game">游戏娱乐</span>
+									<span th:case="free">自主择友</span>
+									<span th:case="sport">运动健身</span>
+								</div>
+							</h2>
 							<div class="clearfix"></div>
 							<ul class="list-unstyled">
-								<li><a href="#">Home</a></li>
+								<li><a href="/">Home</a></li>
 								<li><a href="#"> - </a></li>
-								<li><a href="#">Blog</a></li>
+								<li><a href="#">
+									<div th:switch="${categories}">
+										<span th:case="blog">博客</span>
+										<span th:case="game">游戏娱乐</span>
+										<span th:case="free">自主择友</span>
+										<span th:case="sport">运动健身</span>
+									</div>
+								</a></li>
 							</ul>
 						</div>
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search by Name">
 							<a href="#" class="sarch-member-btn"><i class="flaticon-search"></i></a>
+							<br />
+							<div class="inner-wrapper">
+								<a style="text-align: center" th:href="@{'/post_publish_'+${categories}}" class="c-btn btn1"><span>发布文章</span></a>
+							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
 		<!-- 文章列表 -->
 		<section class="blog-page new-block pdtb-100">
 			<div class="container">
 				<div class="row">
+
+
 					<div th:each="myPost : ${MyPosts}">
 						<div class="col-lg-12">
 							<div class="blogs">
@@ -150,7 +170,7 @@
 								</div>
 								<div class="blog-txt">
 									<div class="inner-txt-block">
-										<a th:href="@{'/blog_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}">Nulla facilisis nisl vitvolutpat placerat. Pellent habitant morbi tristique .</span></h2></a>
+										<a th:href="@{'/blog_get_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}">Nulla facilisis nisl vitvolutpat placerat. Pellent habitant morbi tristique .</span></h2></a>
 										<ul class="list-unstyled profile-contact">
 											<li><a href="#"><i class="fa fa-user"></i><span th:text="${myPost.getAuthor()}">Tenma Shyna</span></a></li>
 											<li><a href="#"><i class="fa fa-clock-o"></i><span th:text="${myPost.getTime()}">Dec 02 , 2018  06:45 pm</span></a></li>
@@ -160,7 +180,7 @@
 											-->
 										</ul>
 										<p><span th:text="${myPost.getContext()}">Aliquam a neque tortor. Donec iaculis auctor turpis. Eporttitor tristique mattis. Vestibulum pretium eleifend risus, scelerisque neque rhoncus in. </span></p>
-										<a th:href="@{'/blog_'+${myPost.getPost_id()}}" class="c-btn btn1">Read More</a>
+										<a th:href="@{'/post_get_'+${categories}+'_'+${myPost.getPost_id()}}" class="c-btn btn1">Read More</a>
 									</div>
 								</div>
 							</div>

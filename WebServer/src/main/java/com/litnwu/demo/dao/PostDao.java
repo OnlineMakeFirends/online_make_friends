@@ -13,14 +13,22 @@ import java.util.List;
 @Repository
 public interface PostDao
 {
-	@Insert("insert into blogs (author,context) values(#{author},#{context})")
-	void createBlog(@Param("author") String author, @Param("context") String context);
+	@Insert("insert into blogs (author,title,context,categories) values(#{author},#{title},#{context},#{categories})")
+	void createBlog(
+			@Param("author") String author,
+			@Param("title") String title,
+			@Param("context") String context,
+			@Param("categories") String categories
+	);
 
 	@Select("select * from blogs where post_id=#{post_id}")
 	Post getPostById(@Param("post_id") Long post_id);
 
-	@Select("select * from ( select * from blogs order by time desc limit 0,20 ) as a order by time")
-	List<Post> getLatest20();
+	@Select("select * from blogs where categories=#{categories} order by time desc limit 0,20")
+	List<Post> getLatest20(@Param("categories") String categories);
+
+	@Select("select * from blogs where categories=#{categories} order by time desc")
+	List<Post> getAll(@Param("categories") String categories);
 }
 
 
@@ -30,6 +38,7 @@ create table blogs(
 	author varchar(10),
 	title varchar(10),
 	context varchar(3000),
+	categories varchar(20) default "blog",
 	time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
