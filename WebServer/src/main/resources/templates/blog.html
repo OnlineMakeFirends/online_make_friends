@@ -34,40 +34,6 @@
 	<div id="wrapper">
 		<!-- header导航栏 -->
 		<header class="new-block header">
-			<!--
-			<div class="topnav new-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="left-nav">
-								<div class="select-country">
-									<select class="nice-select">
-										<option value="0">English</option>
-										<option value="1">Hindi</option>
-									</select>
-								</div>
-								<div class="select-inr">
-									<select class="nice-select">
-										<option value="0">USD</option>
-										<option value="1">INR</option>
-									</select>
-								</div>
-							</div>
-							<div class="right-nav">
-								<span class="top-nav-signup_ligin">
-									<div th:if="${session.SPRING_SECURITY_CONTEXT != null}">
-                						<span th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></span> / <a href="login">注销</a>
-            						</div>
-            						<div th:if="${session.SPRING_SECURITY_CONTEXT == null}">
-               							<a href="/regist">注册</a> / <a href="login">登录</a>
-            						</div>
-								</span>
-								<a href="#" class="support-num">电话支持 : +1 (123 ) 456 789</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>-->
 			<div class="main-nav new-block">
 				<div class="overlay"></div>
 				<div class="container-fluid pad0">
@@ -81,13 +47,13 @@
 								<nav class="nav">
 									<ul class="list-unstyled">
 										<li><a href="/">首页</a></li>
-										<li><a href="search_girls.html">在线匹配</a></li>
+										<li><a href="search_girls">在线匹配</a></li>
 										<li><a href="post_categories_free">自主择友</a></li>
 										<li><a href="post_categories_game">游戏娱乐</a></li>
 										<li><a href="post_categories_sport">运动健身</a></li>
 										<li><a href="post_categories_blog">博客</a></li>
-										<li><a href="../static/about_us.html">关于我们</a></li>
-										<li><a href="../static/contact_us.html">联系我们</a></li>
+										<li><a href="about_us.html">关于我们</a></li>
+										<li><a href="contact_us.html">联系我们</a></li>
 
 										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
 											<li class="active drop">
@@ -102,7 +68,6 @@
 											<li><a href="/regist">注册</a></li>
 											<li><a href="login">登录</a></li>
 											-->
-
 										</span>
 									</ul>
 								</nav>
@@ -143,9 +108,9 @@
 							</ul>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search by Name">
+							<!--<input type="text" class="form-control" placeholder="Search by Name">
 							<a href="#" class="sarch-member-btn"><i class="flaticon-search"></i></a>
-							<br />
+							<br />-->
 							<div class="inner-wrapper">
 								<a style="text-align: center" th:href="@{'/post_publish_'+${categories}}" class="c-btn btn1"><span>发布文章</span></a>
 							</div>
@@ -313,11 +278,14 @@
 						</div>
 					</div>
 					-->
+
+					<!-- view more
 					<div class="col-lg-12">
 						<div class="text-center">
 							<a href="#" class="c-btn btn1">View More</a>
 						</div>
 					</div>
+					-->
 				</div>
 			</div>
 		</section>

@@ -35,40 +35,6 @@
 	<div id="wrapper">
 		<!-- header导航栏 -->
 		<header class="new-block header">
-			<!--
-			<div class="topnav new-block">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="left-nav">
-								<div class="select-country">
-									<select class="nice-select">
-										<option value="0">English</option>
-										<option value="1">Hindi</option>
-									</select>
-								</div>
-								<div class="select-inr">
-									<select class="nice-select">
-										<option value="0">USD</option>
-										<option value="1">INR</option>
-									</select>
-								</div>
-							</div>
-							<div class="right-nav">
-								<span class="top-nav-signup_ligin">
-									<div th:if="${session.SPRING_SECURITY_CONTEXT != null}">
-                						<span th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></span> / <a href="login">注销</a>
-            						</div>
-            						<div th:if="${session.SPRING_SECURITY_CONTEXT == null}">
-               							<a href="/regist">注册</a> / <a href="login">登录</a>
-            						</div>
-								</span>
-								<a href="#" class="support-num">电话支持 : +1 (123 ) 456 789</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>-->
 			<div class="main-nav new-block">
 				<div class="overlay"></div>
 				<div class="container-fluid pad0">
@@ -82,13 +48,13 @@
 								<nav class="nav">
 									<ul class="list-unstyled">
 										<li><a href="/">首页</a></li>
-										<li><a href="search_girls.html">在线匹配</a></li>
+										<li><a href="search_girls">在线匹配</a></li>
 										<li><a href="post_categories_free">自主择友</a></li>
 										<li><a href="post_categories_game">游戏娱乐</a></li>
 										<li><a href="post_categories_sport">运动健身</a></li>
 										<li><a href="post_categories_blog">博客</a></li>
-										<li><a href="../static/about_us.html">关于我们</a></li>
-										<li><a href="../static/contact_us.html">联系我们</a></li>
+										<li><a href="about_us.html">关于我们</a></li>
+										<li><a href="contact_us.html">联系我们</a></li>
 
 										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
 											<li class="active drop">
@@ -103,7 +69,6 @@
 											<li><a href="/regist">注册</a></li>
 											<li><a href="login">登录</a></li>
 											-->
-
 										</span>
 									</ul>
 								</nav>
@@ -114,6 +79,7 @@
 			</div>
 		</header>
 
+		<!--
 		<section class="page-info new-block">
 			<div class="fixed-bg" style="background: url('images/page-info-bg.jpg');"></div>
 			<div class="overlay"></div>
@@ -137,7 +103,7 @@
 				</div>
 			</div>
 		</section>
-
+		-->
 		<section class="single-blog new-block">
 			<div class="container">
 				<div class="row">
@@ -172,7 +138,7 @@
 								</div>
 							</div>-->
 
-							<!-- 文章标签 -->
+							<!-- 文章标签
 							<div class="tags-block new-block">
 								<ul class="list-unstyled">
 									<li><a href="#"><i class="flaticon-shopping"></i></a></li>
@@ -184,8 +150,8 @@
 									<li><a href="#">Appearance</a></li>
 								</ul>
 							</div>
-
-							<!-- 推荐文章 -->
+							-->
+							<!-- 推荐文章
 							<div class="blog-slider">
 								<div class="blog_slider owl-carousel owl-theme">
 									<div class="item">
@@ -222,9 +188,10 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 						</div><!-- single-blog-wrapper -->
 
+						<!-- 文章评论
 						<div class="comments-block">
 							<h2>Comments 03 :</h2>
 							<div class="comment-box new-block">
@@ -240,6 +207,7 @@
 									</div>
 								</div>
 							</div>
+
 
 							<div class="comment-box new-block">
 								<div class="img-block">
@@ -269,7 +237,7 @@
 									</div>
 								</div>
 							</div>
-							<hr class="hr new-block"><!-- hr -->
+							<hr class="hr new-block">
 							<div class="comment-box new-block">
 								<div class="img-block">
 									<div class="img-holder">
@@ -283,11 +251,14 @@
 									</div>
 								</div>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<!--
 		<section class="leave-replay new-block">
 			<div class="container">
 				<div class="row">
@@ -331,9 +302,13 @@
 					</div>
 				</div>
 			</div>
-		</section><!-- leave-replay -->
-				
+		</section> leave-replay -->
 
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 		<footer class="r-footer new-block pdtb-100">
 			<div class="container">
 				<div class="row">

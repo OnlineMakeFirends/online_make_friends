@@ -36,12 +36,14 @@ public interface userDao {
 }
 
 /*创建表
-CREATE TABLE `user` (
+CREATE TABLE `user`(
   `id` bigint(32) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
+ `name` varchar(255) DEFAULT NULL,
+`sexy` varchar(255) DEFAULT NULL,
   `passwd` varchar(255) DEFAULT NULL,
-  `location` varchar(255) DEFAULT NULL,
-
+  `city` varchar(255) DEFAULT NULL,
+  `age` bigint(32),
+ `education` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
  */
