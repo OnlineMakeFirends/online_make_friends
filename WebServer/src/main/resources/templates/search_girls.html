@@ -115,11 +115,12 @@
 				<table id="table_id" class="display">
 					<thead>
 						<tr>
-							<th>name</th>
-							<th>city</th>
-							<th>age</th>
-							<th>education</th>
-							<th>image</th>
+							<th>姓名</th>
+							<th>城市</th>
+							<th>年龄</th>
+							<th>教育水平</th>
+							<th>联系方式</th>
+							<th>头像</th>
 
 						</tr>
 					</thead>
@@ -235,6 +236,7 @@
 								d.push(json[i].city)
 								d.push(json[i].age)
 								d.push(json[i].education)
+								d.push(json[i].phone)
 								d.push("<img src='images/img"+ json[i].id+".jpg'>")
 								ret.push(d)
 							}
@@ -242,11 +244,12 @@
 							return ret;
 						},
 						columns: [
-							{data: 'name'},
-							{data: 'city'},
-							{data: 'age'},
-							{data: 'education'},
-							{data: 'image'}
+							{data: '姓名'},
+							{data: '城市'},
+							{data: '年龄'},
+							{data: '教育水平'},
+							{data: '联系方式'},
+							{data: '头像'}
 						],
 
 					}

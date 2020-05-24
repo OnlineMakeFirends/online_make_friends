@@ -35,6 +35,7 @@ public class User implements UserDetails {
     private Integer age;
     private String city;
     private String education;
+    private String phone;
 
     public User(String name, String passwd){
         this.name = name;
