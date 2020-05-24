@@ -67,6 +67,7 @@
 	-->
 
 	<div id="wrapper">
+		<!-- header导航栏 -->
 		<header class="new-block header">
 			<!--
 			<div class="topnav new-block">
@@ -116,10 +117,10 @@
 									<ul class="list-unstyled">
 										<li><a href="/">首页</a></li>
 										<li><a href="search_girls.html">在线匹配</a></li>
-										<li><a href="search_girls.html">自主择友</a></li>
-										<li><a href="online_search_result.html">游戏娱乐</a></li>
-										<li><a href="online_search_country.html">运动健身</a></li>
-										<li><a href="blog.html">博客</a></li>
+										<li><a href="post_categories_free">自主择友</a></li>
+										<li><a href="post_categories_game">游戏娱乐</a></li>
+										<li><a href="post_categories_sport">运动健身</a></li>
+										<li><a href="post_categories_blog">博客</a></li>
 										<li><a href="../static/about_us.html">关于我们</a></li>
 										<li><a href="../static/contact_us.html">联系我们</a></li>
 
@@ -145,8 +146,11 @@
 					</div>
 				</div>
 			</div>
-		</header> <!-- header -->
+		</header>
+
+		<!-- 封面页 和 登录页 -->
 		<div class="banner new-block">
+			<!-- 封面页 -->
 			<div id="slider" class="slider1 slider-stl owl-carousel owl-theme">
 			    <div class="item">
 			    	<div class="slider-block new-block">
@@ -242,6 +246,8 @@
 				    </div>
 			    </div>
 			</div>
+
+			<!-- 登录页 -->
 			<div th:if="${session.SPRING_SECURITY_CONTEXT == null}" class="overlay-design">
 		    	<div class="container">
 		    		<div class="row">
@@ -334,8 +340,9 @@
 		    		</div>
 		    	</div>
 		    </div>
+		</div>
 
-		</div><!--// banner -->
+		<!-- 首页主体内容 -->
 		<div class="why-join new-block pdtb-100">
 			<div class="overlay"></div>
 			<div class="container">

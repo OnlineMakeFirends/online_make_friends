@@ -51,7 +51,12 @@ public class BrowerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(userLoginAuthenticationFailureHandler) // 自定义登录失败处理
                 .and()
                 .authorizeRequests()  //定义哪些url需要保护，哪些url不需要保护
-                //.antMatchers("/").authenticated()
+                .antMatchers("/post_publish_blog").authenticated()
+                .antMatchers("/post_publish_sport").authenticated()
+                .antMatchers("/post_publish_game").authenticated()
+                .antMatchers("/post_publish_free").authenticated()
+                .antMatchers("/post_submit").authenticated()
+
                 //.antMatchers("/home").authenticated()
                 .and()
                 .sessionManagement().maximumSessions(1)

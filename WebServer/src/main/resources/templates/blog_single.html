@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
 	<link rel="stylesheet" href="css/colors.css">
 </head>
 <body>
-	<!-- Loader -->
+	<!-- Loader
 	<div class="loader_wrapper stl2" id="page-preloader">
 		<div class="loader-center">		
 			<div class="spinner">
@@ -28,11 +29,13 @@
 				<div class="heart heart3"></div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 
 	<div id="wrapper">
+		<!-- header导航栏 -->
 		<header class="new-block header">
+			<!--
 			<div class="topnav new-block">
 				<div class="container">
 					<div class="row">
@@ -52,41 +55,56 @@
 								</div>
 							</div>
 							<div class="right-nav">
-								<span class="top-nav-signup_ligin"><a href="#">SignUp</a> / <a href="#">Login</a></span>
-								<a href="#" class="support-num">Support Number : +1 (123 ) 456 789</a>
+								<span class="top-nav-signup_ligin">
+									<div th:if="${session.SPRING_SECURITY_CONTEXT != null}">
+                						<span th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></span> / <a href="login">注销</a>
+            						</div>
+            						<div th:if="${session.SPRING_SECURITY_CONTEXT == null}">
+               							<a href="/regist">注册</a> / <a href="login">登录</a>
+            						</div>
+								</span>
+								<a href="#" class="support-num">电话支持 : +1 (123 ) 456 789</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<div class="main-nav new-block">
 				<div class="overlay"></div>
 				<div class="container-fluid pad0">
 					<div class="row no-gutters">
 						<div class="col-lg-12">
 							<div class="logo">
-								<a href="home.html"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
+								<a href="/"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
 							</div>
 							<a href="#" class="nav-opener"><i class="fa fa-bars"></i></a>
 							<div class="nav-block">
 								<nav class="nav">
 									<ul class="list-unstyled">
-										<li class="drop"><a href="#">Home</a>
-											<ul class="drop-down">
-												<li><a href="index.html">Home 1</a></li>
-												<li><a href="../static/index2.html">Home 2</a></li>
-												<li><a href="../static/index3.html">Home 3</a></li>
-											</ul>
-										</li>
-										<li><a href="search_girls.html">Girls</a></li>
-										<li><a href="search_girls.html">Boys</a></li>
-										<li><a href="online_search_result.html">Online Users</a></li>
-										<li><a href="online_search_country.html">Countries</a></li>
-										<li><a href="search_by_map.html">All World</a></li>
-										<li><a href="#">Filter Profile</a></li>
-										<li class="active"><a href="blog.html">Blog</a></li>
-										<li><a href="../static/about_us.html">About us</a></li>
-										<li><a href="../static/contact_us.html">Contact Us</a></li>
+										<li><a href="/">首页</a></li>
+										<li><a href="search_girls.html">在线匹配</a></li>
+										<li><a href="post_categories_free">自主择友</a></li>
+										<li><a href="post_categories_game">游戏娱乐</a></li>
+										<li><a href="post_categories_sport">运动健身</a></li>
+										<li><a href="post_categories_blog">博客</a></li>
+										<li><a href="../static/about_us.html">关于我们</a></li>
+										<li><a href="../static/contact_us.html">联系我们</a></li>
+
+										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
+											<li class="active drop">
+												<a href="#" th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></a>
+												<ul class="drop-down">
+													<li><a href="/logout">注销</a></li>
+												</ul>
+											</li>
+										</span>
+										<!--
+										<span th:if="${session.SPRING_SECURITY_CONTEXT == null}">
+											<li><a href="/regist">注册</a></li>
+											<li><a href="login">登录</a></li>
+											-->
+
+										</span>
 									</ul>
 								</nav>
 							</div>
@@ -94,7 +112,7 @@
 					</div>
 				</div>
 			</div>
-		</header> <!-- header -->
+		</header>
 
 		<section class="page-info new-block">
 			<div class="fixed-bg" style="background: url('images/page-info-bg.jpg');"></div>
@@ -125,22 +143,25 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="single-blog-wrapper new-block">
+							<!-- 文章开头图片
 							<div class="img-holder">
 								<img src="images/img94.jpg" alt="" class="img-responsive">
-							</div>
+							</div>-->
 							<div class="blog-txt">
 								<div class="inner-txt-block">
-									<a href="#"><h2> Nam vulputate vitae mauris at facilisis. Fusce vel eros commodo, consequat augue sit amet.</h2></a>
+									<a th:href="@{'/post_get_'+${categories}+'_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}"> Nam vulputate vitae mauris at facilisis. Fusce vel eros commodo, consequat augue sit amet.</span></h2></a>
 									<ul class="list-unstyled profile-contact">
-										<li><a href="#"><i class="fa fa-user"></i>Tenma Shyna</a></li>
+										<li><a href="#"><i class="fa fa-user"></i><span th:text="${myPost.getAuthor()}">Tenma Shyna</span></a></li>
 										<li><a href="#"><i class="fa fa-clock-o"></i>Dec 02 , 2018  06:45 pm</a></li>
-										<li><a href="#"><i class="fa fa-heart"></i>275</a></li>
-										<li><a href="#"><i class="fa fa-comment-o"></i>66</a></li>
+										<!--<li><a href="#"><i class="fa fa-heart"></i>275</a></li>
+										<li><a href="#"><i class="fa fa-comment-o"></i>66</a></li>-->
 									</ul>
-									<p>Maecenas bibendum turpis at purus facilisis lobortis. Integer vehicula odio elementum nisi tempor, a iaculis nulla auctor. Cras turpis turpis, pulvinar vel fringilla ornare, pellentesque quis elit. Nam interdum lobortis cursus. Nullam tincidunt eget mauris ac auctor.</p>
-									<p>Phasellus interdum vitae risus vitae mattis. Nullam fringilla volutpat accumsan. Praesent interdum ex est, nec mollis urna mattis vitae. Mauris pretium elit id commodo ornare. Aenean fermentum velit sit amet lacus dignissim, eget ultrices sapien tempus. Nam enim tellus, iaculis id metus nec, pulvinar imperdiet nibh. Donec pretium suscipit lacinia. </p>
+									<p><span th:text="${myPost.getContext()}">Maecenas bibendum turpis</span></p>
+									<!--<p>Phasellus interdum vitae risus vitae mattis. Nullam fringilla volutpat accumsan. Praesent interdum ex est, nec mollis urna mattis vitae. Mauris pretium elit id commodo ornare. Aenean fermentum velit sit amet lacus dignissim, eget ultrices sapien tempus. Nam enim tellus, iaculis id metus nec, pulvinar imperdiet nibh. Donec pretium suscipit lacinia. </p>-->
 								</div>
 							</div>
+
+							<!-- 文章内容，含高亮内容
 							<div class="blog-info">
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere, quam eu aliquet convallis, dolor metus vulputate eros, vitae condimentum nulla nunc nec eros. Mauris varius arcu a ultrices ullamcorper. Aliquam ultrices congue lacus eu posuere. In hac habitasse platea dictumst. Donec ut erat lobortis, feugiat arcu id, vestibulum sem. Nunc pulvinar eleifend est at consequat. </p>
 							</div>
@@ -149,7 +170,9 @@
 									<p>Maecenas bibendum turpis at purus facilisis lobortis. Integer vehicula odio elementum nisi tempor, a iaculis nulla auctor. Cras turpis turpis, pulvinar vel fringilla ornare, pellentesque quis elit. Nam interdum lobortis cursus. Nullam tincidunt eget mauris ac auctor.</p>
 									<p>Phasellus interdum vitae risus vitae mattis. Nullam fringilla volutpat accumsan. Praesent interdum ex est, nec mollis urna mattis vitae. Mauris pretium elit id commodo ornare. Aenean fermentum velit sit amet lacus dignissim, eget ultrices sapien tempus. Nam enim tellus, iaculis id metus nec, pulvinar imperdiet nibh. Donec pretium suscipit lacinia. </p>
 								</div>
-							</div>
+							</div>-->
+
+							<!-- 文章标签 -->
 							<div class="tags-block new-block">
 								<ul class="list-unstyled">
 									<li><a href="#"><i class="flaticon-shopping"></i></a></li>
@@ -161,6 +184,8 @@
 									<li><a href="#">Appearance</a></li>
 								</ul>
 							</div>
+
+							<!-- 推荐文章 -->
 							<div class="blog-slider">
 								<div class="blog_slider owl-carousel owl-theme">
 									<div class="item">
@@ -363,7 +388,7 @@
 			
 		</div>
 		<span id="go_to_top" class="go-to-top"><i class="fa fa-long-arrow-up"></i></span>
-		<div class="online-side-nav">
+		<!-- 在线好友侧边栏<div class="online-side-nav">
 			<span class="nav-btn">
 				<a href="#"><i class="flaticon-left-arrow"></i></a>
 			</span>
@@ -430,7 +455,7 @@
 				</div> 
 			 
 			</div>
-		</div>
+		</div>-->
 	
 	</div>
 
