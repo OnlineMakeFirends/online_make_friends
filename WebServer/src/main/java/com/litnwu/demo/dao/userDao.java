@@ -21,15 +21,15 @@ public interface userDao {
 
 
     @Select({"<script>",
-            "select * from user where 1=1" +
-            "<when test='!city.isEmpty()'>" +
-            " and city=#{city}" +
-            "</when>" +
-            "<when test='age != null'>" +
-            " and #{age} > age" +
-            "</when>" +
-            "<when test='!education.isEmpty()'>" +
-            " and #{education} = education" +
+            "select * from user where 1=1",
+            "<when test='!city.isEmpty()'>",
+            " and city=#{city}",
+            "</when>",
+            "<when test='age != null'>",
+            " and #{age}+3 &gt;= age and #{age}-3 &lt;= age",
+            "</when>",
+            "<when test='!education.isEmpty()'>",
+            " and #{education} = education",
             "</when>",
             "</script>"})
     List<User> Search(@Param("city") String city, @Param("age") Integer age, @Param("education") String education);
