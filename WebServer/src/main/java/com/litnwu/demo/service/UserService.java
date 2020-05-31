@@ -19,7 +19,7 @@ public class UserService {
         return  userDao.Login(name);
     }
 
-    public void regist(String name,String passwd){
-        userDao.register(name,passwd);
+    public void regist(String name,String passwd,Integer age,String city,String education,String sexy){
+        userDao.register(name,passwd,age, city, education, sexy);
     }
 }

@@ -36,7 +36,7 @@ public interface PostDao
 create table blogs(
 	post_id int not null auto_increment primary key,
 	author varchar(10),
-	title varchar(10),
+	title varchar(50),
 	context varchar(3000),
 	categories varchar(20) default "blog",
 	time datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
