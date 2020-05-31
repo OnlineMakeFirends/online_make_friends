@@ -32,9 +32,13 @@ public class User implements UserDetails {
     private String passwd;
 
     private String sexy;
+
+    @NotNull(message = "年龄不为空!")
     private Integer age;
     private String city;
     private String education;
+    @NotBlank(message = "联系方式不为空!")
+    @NotNull
     private String phone;
 
     public User(String name, String passwd){

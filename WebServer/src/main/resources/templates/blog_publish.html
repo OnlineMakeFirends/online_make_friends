@@ -102,7 +102,7 @@
 
                                     <div class="row">
                                         <div class="form-group">
-                                        <textarea    cols="100"   rows="10"    th:field="*{context}" id="context" size="100"></textarea><br />
+                                        <textarea    style="margin: 0px; height: 146px; width: 100%;"  cols="100"   rows="10"    th:field="*{context}" id="context" size="100"></textarea><br />
                                         <span color="red"  class="validationError" th:if="${#fields.hasErrors('context')}" th:errors="*{context}"></span>
                                         </div>
                                     </div>
@@ -134,7 +134,8 @@
                                         </div>
                                     </div>
                                     
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
