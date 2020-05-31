@@ -394,6 +394,16 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <label>联系方式</label>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <input  class="form-control" type="text" th:field="*{phone}" id="phone" >
+                                    <span class="validationError" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="">

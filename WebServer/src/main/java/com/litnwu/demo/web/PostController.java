@@ -44,7 +44,7 @@ public class PostController
 	public String singlePost(@PathVariable("categories") String categories,@PathVariable("post_id") Long post_id, Model model)
 	{
 		Post post = postService.getPostById(post_id);
-		//System.out.println(post.getContext());
+		System.out.println(post.getTime());
 		model.addAttribute("myPost",post);
 		model.addAttribute("categories",categories);
 		return "blog_single";

@@ -55,7 +55,7 @@ public class RegistpageController {
                 model.addAttribute("result", result);
                 return "regist";
             }
-            userService.regist(user.getUsername(),ENCODER.encode(user.getPassword()),user.getAge(),user.getCity(),user.getEducation(),user.getSexy());
+            userService.regist(user.getUsername(),ENCODER.encode(user.getPassword()),user.getAge(),user.getCity(),user.getEducation(),user.getSexy(),user.getPhone());
         }
         catch (Exception e){
             result = new JsonData(303,"未知错误！");

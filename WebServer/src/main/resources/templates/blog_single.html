@@ -117,7 +117,7 @@
 									<a th:href="@{'/post_get_'+${categories}+'_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}"> Nam vulputate vitae mauris at facilisis. Fusce vel eros commodo, consequat augue sit amet.</span></h2></a>
 									<ul class="list-unstyled profile-contact">
 										<li><a href="#"><i class="fa fa-user"></i><span th:text="${myPost.getAuthor()}">Tenma Shyna</span></a></li>
-										<li><a href="#"><i class="fa fa-clock-o"></i>Dec 02 , 2018  06:45 pm</a></li>
+										<li><a href="#"><i class="fa fa-clock-o"></i><span th:text="${myPost.getTime()}">Dec 02 , 2018  06:45 pm</span></a></li>
 										<!--<li><a href="#"><i class="fa fa-heart"></i>275</a></li>
 										<li><a href="#"><i class="fa fa-comment-o"></i>66</a></li>-->
 									</ul>
