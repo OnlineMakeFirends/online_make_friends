@@ -1,10 +1,17 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:th="http://www.thymeleaf.org">
+<head th:switch="${categories}">
+	<title th:case="blog">博客</title>
+	<title th:case="game">游戏娱乐</title>
+	<title th:case="free">自主择友</title>
+	<title th:case="sport">运动健身</title>
+</head>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blog | Lamour - Dating Social Network Website HTML5 Template</title>
+
+
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
 	<link rel="icon" href="images/fav.png" type="image/x-icon">
