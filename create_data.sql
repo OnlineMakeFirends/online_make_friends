@@ -11,7 +11,7 @@ CREATE TABLE `user`(
   `age` bigint(32),
  `education` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 insert into user values (1, 'sunyanjie', 'Ů','123456', 'nanjing', 22, 'studying');
 insert into user values (2, 'sunyanjie1','Ů', '123456', 'nanjing', 23, 'graduate');

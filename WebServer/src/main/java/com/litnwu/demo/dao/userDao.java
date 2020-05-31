@@ -16,8 +16,8 @@ public interface userDao {
     @Select("select * from user where name=#{name}")
     User Login(@Param("name") String name);
 
-    @Insert("insert into user (name,passwd) values(#{name},#{passwd})")
-    void register(@Param("name") String name,@Param("passwd") String passwd);
+    @Insert("insert into user (name,passwd,age,city,education, sexy) values(#{name},#{passwd},#{age},#{city},#{education}, #{sexy})")
+    void register(@Param("name") String name,@Param("passwd") String passwd, @Param("age") Integer age,@Param("city") String city,@Param("education") String education,@Param("sexy") String sexy);
 
 
     @Select({"<script>",
