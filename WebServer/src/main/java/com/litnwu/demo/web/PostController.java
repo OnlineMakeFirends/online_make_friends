@@ -72,9 +72,7 @@ public class PostController
 	public String publish(@Valid Post post, Errors errors, Model model)
 	{
 		JsonData result;
-
-
-		System.out.println(post.getContext());
+		//System.out.println(post.getAuthor()+" "+post.getCategories());
 
 		boolean res = postService.createBlog(post.getAuthor(),post.getTitle(),post.getContext(),post.getCategories());
 		if(res == true)

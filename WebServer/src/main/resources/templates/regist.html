@@ -140,7 +140,8 @@
                                     <li><a href="post_categories_game">游戏娱乐</a></li>
                                     <li><a href="post_categories_sport">运动健身</a></li>
                                     <li><a href="post_categories_blog">博客</a></li>
-
+                                    <li><a href="about_us.html">关于我们</a></li>
+                                    <li><a href="contact_us.html">联系我们</a></li>
 
                                     <span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
 											<li class="active drop">
@@ -337,65 +338,6 @@
                             </div>
 
                             <div class="row">
-                                <label>性别</label>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group">
-                                    <select id="sexy" class="form-control" th:field="*{sexy}" >
-                                        <option value="男" >男</option>
-                                        <option value="女">女</option>
-                                    </select>
-                                    <span class="validationError" th:if="${#fields.hasErrors('sexy')}" th:errors="*{sexy}"></span>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label>年龄</label>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group">
-                                    <input  class="form-control" type="number" th:field="*{age}" id="age" >
-                                    <span class="validationError" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <label>学历</label>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group">
-                                    <select id="education" class="form-control" th:field="*{education}" >
-                                        <option value="graduate" >graduate</option>
-                                        <option value="Post Graduate">Post Graduate</option>
-                                        <option value="studying">studying</option>
-                                    </select>
-
-                                    <span class="validationError" th:if="${#fields.hasErrors('education')}" th:errors="*{education}"></span>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <label>所在城市</label>
-                            </div>
-
-                            <div class="row">
-                                <div class="form-group">
-                                    <select style="width:200px;" class="form-control"  id="city"  th:field="*{city}" >
-                                        <option value="nanjing">nanjing</option>
-                                        <option value="hangzhou">hangzhou</option>
-                                        <option value="beijing" >beijing</option>
-                                    </select>
-
-                                    <span class="validationError" th:if="${#fields.hasErrors('city')}" th:errors="*{city}"></span>
-                                </div>
-                            </div>
-
-
-                            <div class="row">
                                 <div class="">
                                     <div class="text-center">
                                     <input class="c-btn btn1 "  type="submit" id="btnSignin"  value="注册">
@@ -411,37 +353,6 @@
         </div>
     </div>
     <span id="go_to_top" class="go-to-top"><i class="fa fa-long-arrow-up"></i></span>
-    <footer class="r-footer new-block pdtb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="newsleter">
-                        <div class="title2">
-                            <h2 class="clr1 fz35">Subscribe Newsleter</h2>
-                            <div class="clearfix"></div>
-                            <!--<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email Address">
-                            <a href="#" class="subscribe-btn">Subscribe</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="footer-nav">
-                        <ul class="list-unstyled">
-                            <li><a href="/">首页</a></li>
-                            <li><a href="search_girls">在线匹配</a></li>
-                            <li><a href="post_categories_free">自主择友</a></li>
-                            <li><a href="post_categories_game">游戏娱乐</a></li>
-                            <li><a href="post_categories_sport">运动健身</a></li>
-                            <li><a href="post_categories_blog">博客</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <div class="copyright new-block">
         <div class="container">
             <div class="row">
@@ -454,7 +365,7 @@
                             <li class="rss"><a href="#"><i class="flaticon-rss-symbol"></i></a></li>
                         </ul>
                     </div>
-                    <p>2020 Design By <a href="http://litnwu.gitee.io/"> LitnWu </a> All Rights Reserved</p>
+                    <p>2018 Design By <a href="http://www.bootstrapmb.com/"> Rewebso </a> All Rights Reserved</p>
                 </div>
             </div>
         </div>

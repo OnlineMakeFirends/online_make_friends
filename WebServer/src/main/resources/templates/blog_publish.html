@@ -1,206 +1,44 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>发布文章</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
-    <link rel="icon" href="images/fav.png" type="image/x-icon">
-    <!-- font-awesome -->
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <!-- include the site stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- main stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- color css -->
-    <link rel="stylesheet" href="css/colors.css">
 </head>
-
 <body>
-    <div id="wrapper">
-        <!-- header导航栏 -->
-        <header class="new-block header">
-            <div class="main-nav new-block">
-                <div class="overlay"></div>
-                <div class="container-fluid pad0">
-                    <div class="row no-gutters">
-                        <div class="col-lg-12">
-                            <div class="logo">
-                                <a href="/"><img src="images/logo2.png" alt="logo" class="img-responsive"></a>
-                            </div>
-                            <a href="#" class="nav-opener"><i class="fa fa-bars"></i></a>
-                            <div class="nav-block">
-                                <nav class="nav">
-                                    <ul class="list-unstyled">
-                                        <li><a href="/">首页</a></li>
-                                        <li><a href="search_girls">在线匹配</a></li>
-                                        <li><a href="post_categories_free">自主择友</a></li>
-                                        <li><a href="post_categories_game">游戏娱乐</a></li>
-                                        <li><a href="post_categories_sport">运动健身</a></li>
-                                        <li><a href="post_categories_blog">博客</a></li>
-
-
-                                        <span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
-                                            <li class="active drop">
-                                                <a href="#"
-                                                    th:text="${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}"></a>
-                                                <ul class="drop-down">
-                                                    <li><a href="/logout">注销</a></li>
-                                                </ul>
-                                            </li>
-                                        </span>
-                                        <!--
-                                    <span th:if="${session.SPRING_SECURITY_CONTEXT == null}">
-                                        <li><a href="/regist">注册</a></li>
-                                        <li><a href="login">登录</a></li>
-                                        -->
-                                        </span>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div th:switch="${result.code}">
-            <span class="validationError" th:case="300" th:text="${result.msg}"></span>
-            <div th:case="200">
-                <script th:inline="javascript">
-                    alert("发布成功！");
-                    window.location.href = "/post_categories_" + [[${ post.categories }]];
-                </script>
-            </div>
-        </div>
-        <div class="Regist-form new-block pd">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="introducing-wrapper">
-                            <div class="inner-wrapper">
-                                <form method="post" class="Regist" th:object="${post}" th:action="@{/post_submit}">
-                                    <div class="row">
-                                        <h2>发布文章</h2>
-                                        <label>文章名称</label>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <input class="form-control" type="text" th:field="*{title}"
-                                                id="title"><br />
-                                            <span color="red" class="validationError" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">                                   
-                                        <label>文章内容</label>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="form-group">
-                                        <textarea    cols="100"   rows="10"    th:field="*{context}" id="context" size="100"></textarea><br />
-                                        <span color="red"  class="validationError" th:if="${#fields.hasErrors('context')}" th:errors="*{context}"></span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">                                   
-                                        <label>作者</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group">
-                                        <input class="form-control" type="text" th:field="*{author}" id="author"  th:attr="value = ${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}" readonly="readonly" ><br />
-                                        <span color="red"  class="validationError" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">                                   
-                                        <label>分类</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="form-group">
-                                        <input class="form-control" type="text" th:field="*{categories}" id="categories" th:attr="value = ${categories}" readonly="readonly"><br />
-                                        <span color="red"  class="validationError" th:if="${#fields.hasErrors('categories')}" th:errors="*{categories}" ></span>
-                                        </div>
-                                    </div>
-                                    <div class="row">     
-                                        <div class="">
-                                            <div class="text-center">                              
-                                                <input  class="c-btn btn1 "  type="submit" value="发布">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <footer class="r-footer new-block pdtb-100">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="newsleter">
-                                <div class="title2">
-                                    <h2 class="clr1 fz35">Subscribe Newsleter</h2>
-                                    <div class="clearfix"></div>
-                                    <!--<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email Address">
-                                    <a href="#" class="subscribe-btn">Subscribe</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="footer-nav">
-                                <ul class="list-unstyled">
-                                    <li><a href="/">首页</a></li>
-                                    <li><a href="search_girls">在线匹配</a></li>
-                                    <li><a href="post_categories_free">自主择友</a></li>
-                                    <li><a href="post_categories_game">游戏娱乐</a></li>
-                                    <li><a href="post_categories_sport">运动健身</a></li>
-                                    <li><a href="post_categories_blog">博客</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <div class="copyright new-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="social-nav">
-                                <ul>
-                                    <li class="tw"><a href="#"><i class="flaticon-twitter"></i></a></li>
-                                    <li class="fb"><a href="#"><i class="flaticon-facebook-logo"></i></a></li>
-                                    <li class="gp"><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
-                                    <li class="rss"><a href="#"><i class="flaticon-rss-symbol"></i></a></li>
-                                </ul>
-                            </div>
-                            <p>2020 Design By <a href="http://litnwu.gitee.io/"> LitnWu </a> All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+<div  th:switch="${result.code}">
+    <span  class="validationError" th:case="300" th:text="${result.msg}"></span>
+    <div th:case="200">
+        <script th:inline="javascript">
+            alert("发布成功！");
+            window.location.href="/post_categories_"+[[${post.categories}]];
+        </script>
     </div>
+</div>
+    <form method="post" th:object="${post}" th:action="@{/post_submit}">
+        <p>
+            文章名称<br />
+            <input type="text" th:field="*{title}" id="title" ><br />
+            <span color="red"  class="validationError" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+        </p>
+        <p>
+            文章内容<br />
+            <input type="text"  th:field="*{context}" id="context"><br />
+            <span color="red"  class="validationError" th:if="${#fields.hasErrors('context')}" th:errors="*{context}"></span>
+        </p>
 
-<!-- Include jQuery -->
-<script src="js/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Plugins -->
-<script src="js/plugins.js"></script>
-<!-- Googleapis -->
-<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo"></script>
-<!-- Custom -->
-<script src="js/custom.js"></script>
+        <p>
+            作者<br />
+            <input type="text" th:field="*{author}" id="author"  th:attr="value = ${session.SPRING_SECURITY_CONTEXT.authentication.principal.username}" readonly="readonly" ><br />
+            <span color="red"  class="validationError" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></span>
+        </p>
+        <p>
+            分类<br />
+            <input type="text" th:field="*{categories}" id="categories" th:attr="value = ${categories}" ><br />
+            <span color="red"  class="validationError" th:if="${#fields.hasErrors('categories')}" th:errors="*{categories}" readonly="readonly"></span>
+        </p>
+        <input type="submit" value="发布">
+    </form>
+
 </body>
 </html>

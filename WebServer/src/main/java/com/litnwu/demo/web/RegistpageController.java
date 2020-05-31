@@ -45,7 +45,7 @@ public class RegistpageController {
             return "regist";
         }
 
-        //System.out.println("[test]:"+user.getUsername()+" "+user.getPassword());
+        System.out.println("[test]:"+user.getUsername()+" "+user.getPassword());
         try{
             User finded_user = userService.findByName(user.getUsername());
 
@@ -55,7 +55,7 @@ public class RegistpageController {
                 model.addAttribute("result", result);
                 return "regist";
             }
-            userService.regist(user.getUsername(),ENCODER.encode(user.getPassword()),user.getAge(),user.getCity(),user.getEducation(),user.getSexy());
+            userService.regist(user.getUsername(),ENCODER.encode(user.getPassword()));
         }
         catch (Exception e){
             result = new JsonData(303,"未知错误！");

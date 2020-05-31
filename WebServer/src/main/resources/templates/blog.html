@@ -52,7 +52,8 @@
 										<li><a href="post_categories_game">游戏娱乐</a></li>
 										<li><a href="post_categories_sport">运动健身</a></li>
 										<li><a href="post_categories_blog">博客</a></li>
-
+										<li><a href="about_us.html">关于我们</a></li>
+										<li><a href="contact_us.html">联系我们</a></li>
 
 										<span th:if="${session.SPRING_SECURITY_CONTEXT != null}">
 											<li class="active drop">
@@ -134,7 +135,7 @@
 								</div>
 								<div class="blog-txt">
 									<div class="inner-txt-block">
-										<a th:href="@{'/post_get_'+${categories}+'_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}">Nulla facilisis nisl vitvolutpat placerat. Pellent habitant morbi tristique .</span></h2></a>
+										<a th:href="@{'/blog_get_'+${myPost.getPost_id()}}"><h2><span th:text="${myPost.getTitle()}">Nulla facilisis nisl vitvolutpat placerat. Pellent habitant morbi tristique .</span></h2></a>
 										<ul class="list-unstyled profile-contact">
 											<li><a href="#"><i class="fa fa-user"></i><span th:text="${myPost.getAuthor()}">Tenma Shyna</span></a></li>
 											<li><a href="#"><i class="fa fa-clock-o"></i><span th:text="${myPost.getTime()}">Dec 02 , 2018  06:45 pm</span></a></li>
@@ -302,7 +303,7 @@
 							<div class="title2">
 								<h2 class="clr1 fz35">Subscribe Newsleter</h2>
 								<div class="clearfix"></div>
-								<!--<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
+								<p class="fz20"> Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="Email Address">
@@ -313,12 +314,16 @@
 					<div class="col-lg-12">
 						<div class="footer-nav">
 							<ul class="list-unstyled">
-								<li><a href="/">首页</a></li>
-								<li><a href="search_girls">在线匹配</a></li>
-								<li><a href="post_categories_free">自主择友</a></li>
-								<li><a href="post_categories_game">游戏娱乐</a></li>
-								<li><a href="post_categories_sport">运动健身</a></li>
-								<li><a href="post_categories_blog">博客</a></li>
+								<li><a href="home.html">Home</a></li>
+								<li><a href="search_girls.html">Girls</a></li>
+								<li><a href="search_girls.html">Boys</a></li>
+								<li><a href="#">Online Users</a></li>
+								<li><a href="online_search_country.html">Countries</a></li>
+								<li><a href="search_by_map.html">All World</a></li>
+								<li><a href="online_search_result.html">Filter Profile</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="../static/contact_us.html">About us</a></li>
+								<li><a href="../static/contact_us.html">Contact Us</a></li>
 							</ul>
 						</div>
 					</div>
@@ -337,11 +342,11 @@
 								<li class="rss"><a href="#"><i class="flaticon-rss-symbol"></i></a></li>
 							</ul>
 						</div>
-						<p>2020 Design By <a href="http://litnwu.gitee.io/"> LitnWu </a> All Rights Reserved</p>
+						<p>2018 Design By <a href="http://www.bootstrapmb.com/"> Rewebso </a> All Rights Reserved</p>
 					</div>
 				</div>
 			</div>
-
+			
 		</div>
 		<span id="go_to_top" class="go-to-top"><i class="fa fa-long-arrow-up"></i></span>
 
