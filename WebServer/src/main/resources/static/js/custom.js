@@ -87,11 +87,11 @@ Project:	Lamour  - Responsive HTML Template
 
 
 		// select
-        /*custom_select: function() {
-        	if ($('select').length) {
+        custom_select: function() {
+        	/*if ($('select').length) {
 			   $('select').niceSelect();
-			}
-        },*/
+			}*/
+        },
 
 		//Banner Slider
         slider: function() {
